@@ -1,0 +1,120 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Container } from "../Container";
+import { Tag } from "../ui/tag";
+import ArrowBtn from "@/components/ui/arrowLeftBtn";
+
+const projects = [
+  {
+    title: "Clothes Marketplace",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut mauris sed leo porttitor elit elementum.",
+    image:
+      "/Project card.webp",
+    tags:[
+      { text: "Online store" },
+      { text: "Web Design"},
+      { text: "Web-development" }
+    ],
+  },
+  {
+    title: "Ukrainemart",
+    description: "The first Ukrainian B2B platform for export",
+    image:
+      "/Project card (1).webp",
+    tags: [
+      { text: "B2B" },
+      { text: "Web Design"},
+      { text: "Web-development" }
+    ],
+  },
+  {
+    title: "Size CRM",
+    description: "CRM - a system for working in the cloud with your unity",
+    image:
+      "/Project card (2).webp",
+    tags: [
+      { text: "CRM-System" },
+      { text: "Web Design"},
+      { text: "Web-development" }
+    ],
+  },
+  {
+    title: "Clickwerk",
+    description: "Mounting systems with pixel strength",
+    image:
+      "/Project card (3).webp",
+    tags: [
+      { text: "Web Design"},
+      { text: "Web-development" }
+    ],
+  },
+];
+
+export function Portfolio() {
+  return (
+    <section className="py-[150px]">
+      <Container>
+        <div>
+          <motion.div className="text-3xl font-bold subtitle-container text-black"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }} 
+              >
+            <h2
+              
+            >
+              Our latest works
+            </h2>
+            <Tag text={"Portfolio"} variant="black" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                className="group relative overflow-hidden rounded-3xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="relative w-full aspect-square max-w-[750px] mx-auto">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70" />
+                </div>
+
+               
+                <div className="absolute top-4 left-4  inline-flex flex-col sm:flex-row gap-2 py-[30px] px-[18px] sm:p-[40px]">
+                    {project.tags.map((tag, index) => (
+                      <Tag key={index} text={tag.text} />
+                    ))}
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-[50px] bg-gradient-to-t from-black/80 to-transparent">
+                  <h3 className="text-3xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-lg text-gray-300">{project.description}</p>
+                  </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div className="btn text-center mt-8"
+             initial={{ opacity: 0 }}
+             whileInView={{ opacity: 1 }}
+             viewport={{ once: true }} >
+            <ArrowBtn text={"Learn more"} />
+          </motion.div>
+        </div>
+      </Container>
+    </section>
+  );
+}

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 0.5px solid red; */
+}
+
+
+
+/* section {
+  border: 2px solid red;
+}
+div {
+  border: 2px solid green;
+} */
+
+.subtitle-container {
+  @apply text-4xl font-bold mb-8 flex items-center justify-between ;
+}
+
+.subtitle-text {
+  @apply  text-4xl font-bold;
+}
+
+.btn {
+  @apply flex justify-center py-[50px];
+}
+
+.input {
+  @apply w-full bg-transparent rounded-full border px-[30px] py-[25px] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-none
+}
+
+.white-section-padding {
+  @apply py-[100px] sm:py-[150px]
+}
