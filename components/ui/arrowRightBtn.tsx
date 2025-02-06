@@ -26,7 +26,7 @@ const ArrowRightButton: React.FC<ArrowRightButtonProps> = ({
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className={`
-        inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium 
+        inline-flex justify-center items-center gap-2 px-4 py-2 rounded-full text-sm font-medium 
         transition bg-btn_color text-white hover:text-btn_color hover:bg-white 
         max-w-[140px] w-full ${className} 
         ${show ? 'hidden sm:inline-flex' : ''} 

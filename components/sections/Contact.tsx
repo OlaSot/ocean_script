@@ -24,9 +24,8 @@ const budgetRanges = [
 
 export function Contact() {
   return (
-    <section className="relative py-20 bg-[url('/CTA.webp')] bg-cover overflow-hidden rounded-[40px]">
+    <section className="relative py-20 bg-[url('/CTA.webp')] bg-cover overflow-hidden rounded-[40px] mb-[150px] text-white ">
       <Container>
-    
         <div className="absolute top-[-80px] left-10 w-60 h-60 ">
           <Image
             src="/Cone-01-2.webp"
@@ -48,7 +47,6 @@ export function Contact() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Text content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +63,6 @@ export function Contact() {
               </h2>
             </motion.div>
 
-    
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

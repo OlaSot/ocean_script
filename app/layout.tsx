@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/sections/Footer';
+import { Footer } from '@/components/layout/Footer';
 
 
 

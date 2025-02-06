@@ -11,42 +11,30 @@ import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { motion } from "framer-motion";
 
 export default function WebDevelopmentPage() {
+  const logos = [
+    { src: "/logos/figma.svg", alt: "Figma" },
+  ];
+
+
   const stages = [
     {
       number: "01",
-      title: "ANALYSIS",
-      description:
-        "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
-      expanded: true,
+      title: "RESEARCH",
+      expanded: false, 
     },
     { number: "02", title: "PROTOTYPE", expanded: false },
-    { number: "03", title: "DESIGN", expanded: false },
-    { number: "04", title: "DEVELOPMENT", expanded: false },
-    { number: "05", title: "LAUNCH", expanded: false },
+    { number: "03", title: "CONCEPT", expanded: false },
+    { number: "04", title: "TEST", expanded: false },
   ];
 
-  const logos = [
-    { src: "/logos/laravel.svg", alt: "Laravel" },
-    { src: "/logos/nuxt.svg", alt: "NuxtJS" },
-    { src: "/logos/go.svg", alt: "Go" },
-    { src: "/logos/next.svg", alt: "Next.js" },
-    { src: "/logos/node.svg", alt: "Node.js" },
-    { src: "/logos/mysql.svg", alt: "MySQL" },
-    { src: "/logos/postgres.svg", alt: "PostgreSQL" },
-    { src: "/logos/mongo.svg", alt: "MongoDB" },
-    { src: "/logos/redis.svg", alt: "Redis" },
-    { src: "/logos/ng.svg", alt: "NGINX" },
-    { src: "/logos/docker.svg", alt: "Docker" },
-    { src: "/logos/aws.svg", alt: "AWS" },
-  ];
 
   return (
     <div>
       <PageHero
-        title="Web development"
+        title="UI/UX Design"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/web-dev.webp"
-        tagText="Web development"
+        bg="/uiBG.webp"
+        tagText="UI/UX"
       />
       <Container>
         <div className="mb-[150px]">
@@ -56,11 +44,12 @@ export default function WebDevelopmentPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>Web development service</h2>
-            <Tag text={"Service"} variant="black" />
+            <h2>Importance of Design</h2>
+            <Tag text={"Design"} variant="black" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+   
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -84,6 +73,7 @@ export default function WebDevelopmentPage() {
               </p>
             </motion.div>
 
+   
             <WorkProcessSteps stages={stages} />
           </div>
         </div>

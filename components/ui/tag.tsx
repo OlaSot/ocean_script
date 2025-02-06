@@ -7,7 +7,7 @@ interface TagProps {
 }
 
 export function Tag({ text, variant = 'white', className = '' }: TagProps) {
-  const baseStyle = 'font-light text-sm  rounded-full px-3 sm:px-[18px] sm:text-[14px] md:text-lg py-2 sm:py-[10px] border';
+  const baseStyle = 'inline-block font-light text-sm rounded-full px-3 sm:px-[18px] sm:text-[14px] md:text-lg py-2 sm:py-[10px] border';
 
   const variantClasses = {
     white: 'text-white border-white',

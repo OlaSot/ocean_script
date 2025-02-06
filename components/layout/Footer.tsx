@@ -1,20 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Container } from "../Container";
 
 export function Footer() {
   return (
-    <footer className="bg-[url('/bg_white.webp')] bg-cover bg-center relative pt-20 pb-8 text-black">
+    <footer className="bg-[url('/bg_white.webp')] bg-cover bg-center relative pt-20 pb-8 text-black ">
       <Container>
       <div className=" relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           <div className="space-y-4">
             <h2 className="text-xl font-bold">Ocean Script</h2>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm ">
               Lorem ipsum dolor sit amet consectetur. Tellus massa vehicula condimentum ut feugiat volutpat sed.
             </p>
           </div>
@@ -26,7 +26,7 @@ export function Footer() {
                 <li key={item}>
                   <Link 
                     href={`/${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm  hover:text-gray-900 transition-colors"
                   >
                     {item}
                   </Link>
@@ -48,12 +48,13 @@ export function Footer() {
                 'Telegram bots'
               ].map((service) => (
                 <li key={service}>
-                  <Link 
-                    href={`/services/${service.toLowerCase().replace(' ', '-')}`}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {service}
-                  </Link>
+<Link 
+  href={`/services/${service.toLowerCase().replace(/[\s&/]/g, '-').replace(/-{2,}/g, '-')}`} 
+  className="text-sm hover:text-gray-900 transition-colors"
+>
+  {service}
+</Link>
+
                 </li>
               ))}
             </ul>
@@ -65,14 +66,14 @@ export function Footer() {
             <div className="space-y-3">
               <a 
                 href="tel:+380970070707" 
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center gap-2 text-sm  hover:text-gray-900 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 +380 97 007 07 07
               </a>
               <a 
                 href="mailto:somemail@gmail.com" 
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center gap-2 text-sm  hover:text-gray-900 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 somemail@gmail.com
