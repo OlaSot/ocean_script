@@ -42,7 +42,7 @@ export function WorkProcessSteps({stages}:WorkProcessStepsProps) {
             </span>
             <span
               className={`text-2xl sm:text-[40px] font-bold tracking-wider ${
-                index % 2 === 0 ? "text-gray-900" : "text-white"
+                index % 2 === 0 ? "text-black" : "text-white"
               }`}
             >
               {stage.title}
