@@ -43,12 +43,12 @@ export function Technologies({ logos }: TechnologiesProps) {
                 : logos.length === 2
                 ? "grid grid-cols-2 gap-12 justify-center" 
                 : logos.length === 3
-                ? "grid grid-cols-3 gap-10 sm:grid-cols-2 sm:grid-rows-2 justify-center" // Три логотипа → 3 в ряд, на узких экранах 2+1
+                ? "grid grid-cols-3 gap-10 sm:grid-cols-2 sm:grid-rows-2 justify-center" 
                 : logos.length === 4
                 ? "grid grid-cols-2 gap-12 justify-center" 
                 : logos.length > 4 && logos.length <= 8
                 ? "grid grid-cols-4 gap-12 justify-center"
-                : "grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-6 justify-center" // 5+ → стандартный грид
+                : "grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-6 justify-center" 
             }`}
           >
             {logos.map((logo, index) => (
