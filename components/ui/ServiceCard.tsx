@@ -17,11 +17,6 @@ export function ServiceCard({ title, description, index, image }: ServiceCardPro
   const theme = pathname === "/services" ? "light" : "dark";
   const [isHovered, setIsHovered] = useState(false);
 
-  const hoverEffects =
-    theme === "light"
-      ? "bg-[url('/stagesBgWhite.webp')] bg-contain"
-      : "hover:bg-[url('/Card.webp')] hover:shadow-lg cursor-pointer";
-
   const textColor = theme === "light" ? "text-black" : "text-white";
   const borderColor = theme === "light" ? "border-black" : "border-white";
   const bgColor = theme === "light" ? "bg-white" : "bg-transparent";
@@ -33,10 +28,18 @@ export function ServiceCard({ title, description, index, image }: ServiceCardPro
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={`relative p-6 rounded-[20px] border min-h-[370px] flex flex-col justify-between
-      ${borderColor} ${bgColor} ${hoverEffects} overflow-hidden`}
+      ${borderColor} ${bgColor} overflow-hidden cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 bg-no-repeat bg-cover pointer-events-none
+          ${theme === "light" ? "bg-[url('/stagesBgWhite.webp')]" : "bg-[url('/Card.webp')] shadow-lg"}
+          ${isHovered ? "opacity-100" : ""}
+        `}
+      />
+
       {image && theme === "light" && (
         <div className="absolute bottom-0 right-[-60px] w-[245px] h-[120px] sm:w-[245px] sm:h-[245px] pointer-events-none">
           <div 
@@ -56,7 +59,7 @@ export function ServiceCard({ title, description, index, image }: ServiceCardPro
         </div>
       )}
 
-      <div>
+      <div className="relative z-10">
         <div className="flex items-center gap-2 mb-2">
           <span className={`w-3 h-3 rounded-full ${theme === "light" ? "bg-black" : "bg-white"}`}></span>
           <h3 className={`text-[24px] sm:text-[28px] font-bold ${textColor}`}>{title}</h3>
@@ -64,22 +67,10 @@ export function ServiceCard({ title, description, index, image }: ServiceCardPro
         <p className={`text-[16px] sm:text-[18px] mb-4 ${textColor}`}>{description}</p>
       </div>
 
-      <ArrowRightButton text="Learn more" arrow={true} show={true} isHovered={isHovered} />
+      <div className="relative z-10">
+        <ArrowRightButton text="Learn more" arrow={true} show={true} isHovered={isHovered} />
+      </div>
     </motion.div>
   );
 }
 
-export default function Home() {
-  return (
-    <div
-      style={{
-        maxWidth: 1280,
-        margin: '0 auto',
-        padding: '2rem',
-        textAlign: 'center',
-      }}
-    >
-      Start prompting.
-    </div>
-  );
-}

@@ -33,9 +33,9 @@ export function Contact() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const inputClasses = "w-full bg-transparent border border-white/40 rounded-full px-[30px] py-[25px] text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-shadow appearance-none";
-  const selectClasses = "w-full bg-transparent border border-white/40 rounded-full px-[30px] py-[25px] text-white flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-shadow appearance-none";
-  const dropdownClasses = "absolute left-0 right-0 mt-2 bg-white/10 backdrop-blur-md text-white rounded-lg shadow-lg overflow-y-auto z-10 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent";
+  const inputClasses = "w-full bg-transparent border border-white/40 rounded-full px-[30px] py-[25px] text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
+  const selectClasses = "w-full bg-transparent border border-white/40 rounded-full px-[30px] py-[25px] text-white flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
+  const dropdownClasses = "absolute left-0 right-0 mt-2 bg-white/10 backdrop-blur-md text-white rounded-[20px] shadow-lg overflow-y-auto z-10 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent";
 
 
   const dropdownMaxHeight = 3 * 48;
@@ -76,35 +76,22 @@ export function Contact() {
             >
               <form className="space-y-6">
                 <div>
-                  <input
-                    type="text"
-                    placeholder="Your name*"
-                    className={inputClasses}
-                  />
+                  <input type="text" placeholder="Your name*" className={inputClasses} />
                 </div>
                 <div>
-                  <input
-                    type="tel"
-                    placeholder="Your phone number*"
-                    className={inputClasses}
-                  />
+                  <input type="tel" placeholder="Your phone number*" className={inputClasses} />
                 </div>
                 <div>
-                  <input
-                    type="email"
-                    placeholder="Your email*"
-                    className={inputClasses}
-                  />
+                  <input type="email" placeholder="Your email*" className={inputClasses} />
                 </div>
 
+            
                 <div className="relative" ref={serviceRef}>
-                  <button
-                    type="button"
-                    onClick={() => setServiceOpen(!serviceOpen)}
-                    className={selectClasses}
-                  >
+                  <button type="button" onClick={() => setServiceOpen(!serviceOpen)} className={selectClasses}>
                     {selectedService}
-                    <span className="ml-2">{serviceOpen ? "▲" : "▼"}</span>
+                    <motion.div animate={{ rotate: serviceOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                      <Image src="/dropdownVector.svg" alt="Dropdown arrow" width={20} height={20} />
+                    </motion.div>
                   </button>
                   <AnimatePresence>
                     {serviceOpen && (
@@ -118,11 +105,7 @@ export function Contact() {
                         style={{ maxHeight: dropdownMaxHeight }}
                       >
                         {services.map((service) => (
-                          <li 
-                            key={service} 
-                            onClick={() => { setSelectedService(service); setServiceOpen(false); }} 
-                            className="px-4 py-3 cursor-pointer hover:bg-white/20 transition h-12"
-                          >
+                          <li key={service} onClick={() => { setSelectedService(service); setServiceOpen(false); }} className="px-4 py-3 cursor-pointer hover:bg-white/20 transition h-12">
                             {service}
                           </li>
                         ))}
@@ -131,14 +114,13 @@ export function Contact() {
                   </AnimatePresence>
                 </div>
 
+                
                 <div className="relative" ref={budgetRef}>
-                  <button
-                    type="button"
-                    onClick={() => setBudgetOpen(!budgetOpen)}
-                    className={selectClasses}
-                  >
+                  <button type="button" onClick={() => setBudgetOpen(!budgetOpen)} className={selectClasses}>
                     {selectedBudget}
-                    <span className="ml-2">{budgetOpen ? "▲" : "▼"}</span>
+                    <motion.div animate={{ rotate: budgetOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                      <Image src="/dropdownVector.svg" alt="Dropdown arrow" width={20} height={20} />
+                    </motion.div>
                   </button>
                   <AnimatePresence>
                     {budgetOpen && (
@@ -152,11 +134,7 @@ export function Contact() {
                         style={{ maxHeight: dropdownMaxHeight }}
                       >
                         {budgetRanges.map((range) => (
-                          <li 
-                            key={range} 
-                            onClick={() => { setSelectedBudget(range); setBudgetOpen(false); }} 
-                            className="px-4 py-3 cursor-pointer hover:bg-white/20 transition h-12"
-                          >
+                          <li key={range} onClick={() => { setSelectedBudget(range); setBudgetOpen(false); }} className="px-4 py-3 cursor-pointer hover:bg-white/20 transition h-12">
                             {range}
                           </li>
                         ))}

@@ -39,8 +39,8 @@ export function WorkProcess() {
               key={stage.number}
               className={`relative overflow-hidden rounded-2xl sm:rounded-3xl ${
                 index % 2 === 0
-                  ? "bg-[url('/stagesDark.webP')] bg-cover bg-center"
-                  : "bg-[url('/stagesBgWhite.webP')] bg-cover bg-center"
+                  ? "bg-[url('/stagesDark.webp')] bg-cover bg-center"
+                  : "bg-[url('/stagesBgWhite.webp')] bg-cover bg-center"
               } shadow-lg transition-transform duration-300 hover:scale-105`}
               style={{ zIndex: index }}
               initial={{ opacity: 0, y: 20 }}
