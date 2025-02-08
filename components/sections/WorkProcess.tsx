@@ -17,16 +17,20 @@ const stages = [
 
 export function WorkProcess() {
   return (
-    <section className="pb-[100px] sm:pb-[150px]">
+    <section className="pb-[80px] md:pb-[120px] lg:pb-[150px]">
       <Container>
-        {/* Заголовок и тег через SectionHeader */}
-        <SectionHeader title="Stages of work" tagText="Work process" tagVariant="black" textVariant="black" />
+        <SectionHeader
+          title="Stages of work"
+          tagText="Work process"
+          tagVariant="black"
+          textVariant="black"
+        />
 
-        <div className="space-y-[-20px] sm:space-y-[-70px] relative">
+        <div className="space-y-[-10px] md:space-y-[-40px] lg:space-y-[-70px] relative">
           {stages.map((stage, index) => (
             <motion.div
               key={stage.number}
-              className={`relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 ${
+              className={`relative overflow-hidden rounded-2xl md:rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 ${
                 index % 2 === 0
                   ? "bg-[url('/stagesDark.webp')] bg-cover bg-center"
                   : "bg-[url('/stagesBgWhite.webp')] bg-cover bg-center"
@@ -37,9 +41,9 @@ export function WorkProcess() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-[50px] py-6 sm:py-[40px] relative sm:text-left">
+              <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[30px] lg:px-[50px] py-6 md:py-[30px] lg:py-[40px] relative text-center md:text-left">
                 <span
-                  className={`text-[60px] sm:text-[150px] font-extrabold ${
+                  className={`text-[50px] md:text-[100px] lg:text-[150px] font-extrabold ${
                     index % 2 === 0 ? "text-transparent" : "text-black"
                   } ${inter.className}`}
                   style={{
@@ -48,8 +52,9 @@ export function WorkProcess() {
                 >
                   {stage.number}
                 </span>
+
                 <span
-                  className={`text-2xl sm:text-[80px] font-bold tracking-wider ${
+                  className={`text-xl md:text-4xl lg:text-[80px] font-bold tracking-wider ${
                     index % 2 === 0 ? "text-white" : "text-gray-900"
                   }`}
                 >

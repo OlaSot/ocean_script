@@ -17,13 +17,33 @@ export default function WebDevelopmentPage() {
       title: "ANALYSIS",
       description:
         "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
-      expanded: true,
     },
-    { number: "02", title: "PROTOTYPE", expanded: false },
-    { number: "03", title: "DESIGN", expanded: false },
-    { number: "04", title: "DEVELOPMENT", expanded: false },
-    { number: "05", title: "LAUNCH", expanded: false },
+    {
+      number: "02",
+      title: "PROTOTYPE",
+      description:
+        "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
+    },
+    {
+      number: "03",
+      title: "DESIGN",
+      description:
+        "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
+    },
+    {
+      number: "04",
+      title: "DEVELOPMENT",
+      description:
+        "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
+    },
+    {
+      number: "05",
+      title: "LAUNCH",
+      description:
+        "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
+    },
   ];
+  
 
   const logos = [
     { src: "/logos/laravel.svg", alt: "Laravel" },

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion";
 import { Tag } from "../ui/tag";
-import { Container } from '../Container';
+
 
 const projects = [
     {

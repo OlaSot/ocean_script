@@ -7,8 +7,8 @@ interface SectionHeaderProps {
   title: string;
   tagText: string;
   tagVariant?: "white" | "black";
-  textVariant?: "white" | "black"; // Новый пропс для цвета текста
-  description?: string; // Дополнительно можно передавать описание
+  textVariant?: "white" | "black"; 
+  description?: string; 
 }
 
 export function SectionHeader({
