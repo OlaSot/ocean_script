@@ -10,7 +10,7 @@ interface WorkProcessStepsProps {
   stages: {
     number: string;
     title: string;
-    description: string;
+    description?: string;
   }[];
 }
 

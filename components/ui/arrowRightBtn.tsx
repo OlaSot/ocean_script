@@ -9,7 +9,7 @@ interface ArrowRightButtonProps {
   onClick?: () => void;
   className?: string;
   arrow?: boolean;
-  show?: boolean; // ✅ Добавлено свойство show
+  show?: boolean; 
   isHovered?: boolean;
 }
 
