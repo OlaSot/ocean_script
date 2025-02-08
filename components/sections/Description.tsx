@@ -13,7 +13,7 @@ export default function Description() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-full relative">
           
-          {/* Обернем в wrapper с overflow-hidden, чтобы анимация не выходила за рамки */}
+       
           <div className="overflow-hidden">
             <motion.div
               initial={{ opacity: 0, x: -50 }}

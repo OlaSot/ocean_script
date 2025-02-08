@@ -40,7 +40,7 @@ export function Header() {
             isScrolled ? "text-black" : "text-white"
           }`}
         >
-          {/* Бургер-меню слева */}
+
           <button
             className={`md:hidden p-2 transition-colors order-first ${
               isScrolled ? "text-black" : "text-white"
@@ -50,14 +50,14 @@ export function Header() {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          {/* Логотип по центру на мобильных */}
+
           <div className="absolute left-1/2 transform -translate-x-1/2 sm:static sm:transform-none">
             <Link href="/">
               <span className="text-[28px] font-bold">Ocean Script</span>
             </Link>
           </div>
 
-          {/* Навигация (скрывается на мобилке) */}
+
           <nav className="hidden md:flex items-center space-x-8">
             {["Services", "Portfolio", "Contacts"].map((item) => (
               <Link
