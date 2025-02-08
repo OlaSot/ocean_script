@@ -23,7 +23,7 @@ export function ServiceCardServices({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative p-6 rounded-[20px] border border-black bg-white min-h-[370px] flex flex-col justify-between 
+      className=" relative p-6 rounded-[20px] border border-black bg-white min-h-[370px] flex flex-col justify-between 
       transition duration-300 overflow-hidden bg-[url('/stagesBgWhite.webp')] bg-contain"
     >
       {image && (

@@ -53,7 +53,7 @@ export function Header() {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 sm:static sm:transform-none">
             <Link href="/">
-              <span className="text-[28px] font-bold">Ocean Script</span>
+              <span className="text-[22px] md:text-[28px] font-bold">Ocean Script</span>
             </Link>
           </div>
 
@@ -94,7 +94,8 @@ export function Header() {
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center justify-between w-full mb-20">
-          <span className="text-2xl font-bold">Ocean Script</span>
+        <span className="text-[22px] md:text-3xl font-bold">Ocean Script</span>
+
           <button className="p-2" onClick={() => setIsMobileMenuOpen(false)}>
             <X className="w-6 h-6" />
           </button>
