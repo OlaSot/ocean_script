@@ -18,12 +18,12 @@ export function Header() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > prevScrollY && currentScrollY > 20) {
-        setIsVisible(false); 
+        setIsVisible(false);
       } else {
-        setIsVisible(true); 
+        setIsVisible(true);
       }
 
-      setIsScrolled(currentScrollY > 20); 
+      setIsScrolled(currentScrollY > 20);
 
       setPrevScrollY(currentScrollY);
     };
@@ -42,7 +42,11 @@ export function Header() {
       transition={{ duration: 0.3 }}
     >
       <Container>
-        <div className={`flex items-center justify-between h-20 transition-all duration-300 ${isScrolled ? "text-black" : "text-white"}`}>
+        <div
+          className={`flex items-center justify-between h-20 transition-all duration-300 ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+        >
           <Link href="/" className="text-[28px] font-bold">
             Ocean Script
           </Link>
@@ -62,12 +66,17 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-6">
-            <button className={`transition-colors ${isScrolled ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"}`}>
+            <button
+              className={`transition-colors ${
+                isScrolled ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"
+              }`}
+            >
               ENG
             </button>
             <ArrowRightButton text="Leave a request" />
           </div>
 
+          {/* Кнопка бургер-меню */}
           <button
             className={`md:hidden p-2 transition-colors ${
               isScrolled ? "text-black" : "text-white"
@@ -79,51 +88,50 @@ export function Header() {
         </div>
       </Container>
 
+      {/* Мобильное меню */}
       <motion.div
-        className="fixed inset-y-0 right-0 w-full bg-black md:hidden"
-        initial="closed"
-        animate={isMobileMenuOpen ? "open" : "closed"}
+        className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-start justify-center px-6 transition-all md:hidden"
+        initial={{ x: "100%" }}
+        animate={{ x: isMobileMenuOpen ? 0 : "100%" }}
         transition={{ duration: 0.3 }}
       >
-        <div className="h-full flex flex-col p-6">
-          <div className="flex justify-end mb-8">
-            <button className="text-white p-2" onClick={() => setIsMobileMenuOpen(false)}>
-              <X className="w-6 h-6" />
-            </button>
-          </div>
+        <button
+          className="absolute top-6 right-6 text-white p-2"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <X className="w-8 h-8" />
+        </button>
 
-          <nav className="flex flex-col space-y-6">
-            {["Services", "Portfolio", "Contacts"].map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link
-                  href={`/${item.toLowerCase()}`}
-                  className="text-2xl font-medium text-white/80 hover:text-white transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span className="text-white text-sm mr-2">0{index + 1}</span>
-                  {item}
-                </Link>
-              </motion.div>
-            ))}
-          </nav>
-
-          <div className="mt-auto space-y-6">
-            <button className="text-white/80 hover:text-white transition-colors">
-              ENG
-            </button>
-
-            <button
-              className="w-full bg-btn_color hover:bg-blue-700 text-white px-6 py-3 rounded-full text-sm font-medium transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+        <nav className="flex flex-col space-y-6 w-full">
+          {["Services", "Portfolio", "Contacts"].map((item, index) => (
+            <motion.div
+              key={item}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
             >
-              Leave a request
-            </button>
-          </div>
+              <Link
+                href={`/${item.toLowerCase()}`}
+                className="text-3xl font-medium text-white hover:text-gray-300 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item}
+              </Link>
+            </motion.div>
+          ))}
+        </nav>
+
+        <div className="mt-8 space-y-6">
+          <button className="text-white text-lg hover:text-gray-300 transition-colors">
+            ENG
+          </button>
+
+          <button
+            className="w-full bg-btn_color hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-medium transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Leave a request
+          </button>
         </div>
       </motion.div>
     </motion.header>

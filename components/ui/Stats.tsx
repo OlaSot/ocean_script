@@ -11,22 +11,24 @@ const stats = [
 export function Stats() {
   return (
     <motion.div 
-      className="grid grid-cols-3 gap-16 sm:gap-8 max-w-3xl mx-auto mt-[70px] px-[33px]"
+      className="flex justify-start gap-8 sm:gap-12 lg:gap-24 mt-[70px] text-left"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
       {stats.map((stat, index) => (
-        <div key={index} className="text-left  sm:text-center">
+        <div key={index} className="text-left min-w-max">
           <motion.div 
-            className="text-[36px] sm:text-[80px] font-bold "
+            className="text-[36px] sm:text-[80px] font-bold whitespace-nowrap"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6 + index * 0.1 }}
           >
             {stat.number}
           </motion.div>
-          <div className="mt-2 text-[14px]  sm:text-[22px]">{stat.label}</div>
+          <div className="mt-2 text-[14px] sm:text-[22px] whitespace-nowrap">
+            {stat.label}
+          </div>
         </div>
       ))}
     </motion.div>
