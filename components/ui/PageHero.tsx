@@ -48,7 +48,7 @@ export function PageHero({
         </motion.h1>
 
         <motion.p
-          className="text-lg text-white max-w-2xl mx-auto mb-12"
+          className="text-lg text-white max-w-4xl mx-auto mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
