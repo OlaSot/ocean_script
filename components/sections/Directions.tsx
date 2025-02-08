@@ -4,7 +4,7 @@ import React from "react";
 import { Tag } from "../ui/tag";
 import { Container } from "../Container";
 import { DirectionsGrid } from "../ui/DirectionsGrid";
-import ArrowBtn from "../ui/arrowLeftBtn"; // Используем ту же кнопку, что и в Services
+import ArrowBtn from "../ui/arrowLeftBtn"; 
 
 export default function Directions() {
   return (

@@ -1,6 +1,5 @@
 "use client";
 
-import { Container } from "../Container";
 import { DirectionCard } from "./DirectionCard";
 
 interface Direction {
@@ -13,7 +12,7 @@ const directions: Direction[] = [
   {
     number: "01",
     title: "Sales analytics",
-    image: "/figures/-01.png",
+    image: "/figures/Untitled-1-01.png",
   },
   {
     number: "02",
