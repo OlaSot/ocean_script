@@ -9,32 +9,32 @@ const services = [
   {
     title: "Web Development",
     description: "Build modern and fast websites with our development team.",
-    image: "figures/untitled-1-01.png",
+    image: "figures/Untitled-1-01.png",
   },
   {
     title: "UI/UX Design",
     description: "Create intuitive and engaging user experiences.",
-    image: "figures/untitled-1-02.png",
+    image: "figures/Untitled-1-02.png",
   },
   {
     title: "Mobile Apps",
     description: "Develop high-performance mobile applications.",
-    image: "figures/untitled-1-03.png",
+    image: "figures/Untitled-1-03.png",
   },
   {
     title: "Digital Strategy",
     description: "Plan and execute effective digital strategies.",
-    image: "figures/untitled-1-04.png",
+    image: "figures/Untitled-1-04.png",
   },
   {
     title: "Cloud Solutions",
     description: "Leverage cloud technologies for scalability.",
-    image: "figures/untitled-1-05.png",
+    image: "figures/Untitled-1-05.png",
   },
   {
     title: "API Integration",
     description: "Seamlessly connect your apps with powerful APIs.",
-    image: "figures/untitled-1-06.png",
+    image: "figures/Untitled-1-06.png",
   },
 ];
 

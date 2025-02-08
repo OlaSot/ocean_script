@@ -13,36 +13,36 @@ const directions: Direction[] = [
   {
     number: "01",
     title: "Sales analytics",
-    image: "/figures/untitled-1-01.png",
+    image: "/figures/-01.png",
   },
   {
     number: "02",
     title: "Conversation Analysis",
-    image: "/figures/untitled-1-02.png",
+    image: "/figures/Untitled-1-02.png",
 
   },
   {
     number: "03",
     title: "Optimization of supplies",
-    image: "/figures/untitled-1-03.png",
+    image: "/figures/Untitled-1-03.png",
 
   },
   {
     number: "04",
     title: "Personalization of offers",
-    image: "/figures/untitled-1-04.png",
+    image: "/figures/Untitled-1-04.png",
 
   },
   {
     number: "05",
     title: "Big data analysis",
-    image: "/figures/untitled-1-05.png",
+    image: "/figures/Untitled-1-05.png",
 
   },
   {
     number: "06",
     title: "Chatbots and Recommender systems",
-    image: "/figures/untitled-1-06.png",
+    image: "/figures/Untitled-1-06.png",
 
   },
 ];
