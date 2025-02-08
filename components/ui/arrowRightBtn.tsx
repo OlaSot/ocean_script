@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 interface ArrowRightButtonProps {
@@ -9,7 +9,8 @@ interface ArrowRightButtonProps {
   onClick?: () => void;
   className?: string;
   arrow?: boolean;
-  show?: boolean; 
+  show?: boolean;
+  isHovered?: boolean; 
 }
 
 const ArrowRightButton: React.FC<ArrowRightButtonProps> = ({
@@ -17,19 +18,24 @@ const ArrowRightButton: React.FC<ArrowRightButtonProps> = ({
   onClick,
   className,
   arrow,
-  show = false, 
+  show = false,
+  isHovered = false,
 }) => {
   return (
     <motion.button
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`
         inline-flex justify-center items-center gap-2 px-4 py-2 rounded-full text-sm font-medium 
-        transition bg-btn_color text-white hover:text-btn_color hover:bg-white 
-        max-w-[140px] w-full ${className} 
-        ${show ? 'hidden sm:inline-flex' : ''} 
+        transition max-w-[140px] w-full ${className} 
+        ${show ? "hidden sm:inline-flex" : ""}
+        ${
+          isHovered
+            ? "bg-white text-btn_color border border-btn_color" 
+            : "bg-btn_color text-white hover:bg-white hover:text-btn_color border border-transparent"
+        }
       `}
     >
       <span>{text}</span>
