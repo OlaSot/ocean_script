@@ -1,12 +1,6 @@
 {
   "extends": "next/core-web-vitals",
 "rules": {
-    "no-restricted-syntax": [
-      "warn",
-      {
-        "selector": "Program",
-        "message": "Этот файл содержит комментарии!"
-      }
-    ]
+    
   }
 }
