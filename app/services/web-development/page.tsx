@@ -6,6 +6,7 @@ import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
 import { PageHero } from "@/components/ui/PageHero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Tag } from "@/components/ui/tag";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { motion } from "framer-motion";
@@ -43,7 +44,6 @@ export default function WebDevelopmentPage() {
         "Tellus purus justo nisl lectus pellentesque. Feugiat mauris enim et venenatis lobortis purus nisl elit. Nec a sapien sollicitudin fermentum auctor non vestibulum volutpat. Proin rutrum consectetur montes elit libero.",
     },
   ];
-  
 
   const logos = [
     { src: "/logos/laravel.svg", alt: "Laravel" },
@@ -70,15 +70,12 @@ export default function WebDevelopmentPage() {
       />
       <Container>
         <div className="mb-[150px]">
-          <motion.div
-            className="text-3xl font-bold subtitle-container text-black "
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2>Web development service</h2>
-            <Tag text={"Service"} variant="black" />
-          </motion.div>
+          <SectionHeader
+            title="Web development service"
+            tagText="Service"
+            tagVariant="black"
+            textVariant="black"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <motion.div
