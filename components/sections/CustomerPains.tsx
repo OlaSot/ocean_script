@@ -39,12 +39,12 @@ const pains = [
 
 export function CustomerPains() {
   return (
-    <section className="white-section-padding bg-white text-black">
+    <section className="my-mobile md:my-desktop bg-white text-black">
       <Container>
         <SectionHeader title="Customer pains" tagText="Pains" tagVariant="black" textVariant="black" />
         
         <div className="flex flex-col lg:flex-row items-start gap-12">
-          {/* Изображение */}
+
           <motion.div
             className="lg:basis-1/3 w-full relative"
             initial={{ opacity: 0, x: -50 }}
@@ -62,7 +62,7 @@ export function CustomerPains() {
             </div>
           </motion.div>
 
-          {/* Список проблем */}
+
           <div className="lg:basis-2/3">
             <div className="space-y-4">
               {pains.map((pain, index) => (

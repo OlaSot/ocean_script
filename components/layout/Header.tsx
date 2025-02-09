@@ -3,9 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { Container } from "../Container";
 import ArrowRightButton from "../ui/arrowRightBtn";
+import burgerIcon from "@/public/burger.svg";
+import x from "@/public/x.svg";
+import Image from "next/image";
+import ArrowLeftButton from "../ui/arrowLeftBtn";
 
 export function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -40,23 +43,26 @@ export function Header() {
             isScrolled ? "text-black" : "text-white"
           }`}
         >
-
           <button
             className={`md:hidden p-2 transition-colors order-first ${
               isScrolled ? "text-black" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <Image src={x} alt="Menu" width={24} height={24} />
+            ) : (
+              <Image src={burgerIcon} alt="Menu" width={24} height={24} />
+            )}
           </button>
-
 
           <div className="absolute left-1/2 transform -translate-x-1/2 sm:static sm:transform-none">
             <Link href="/">
-              <span className="text-[22px] md:text-[28px] font-bold">Ocean Script</span>
+              <span className="text-[22px] md:text-[28px] font-bold">
+                Ocean Script
+              </span>
             </Link>
           </div>
-
 
           <nav className="hidden md:flex items-center space-x-8">
             {["Services", "Portfolio", "Contacts"].map((item) => (
@@ -64,7 +70,9 @@ export function Header() {
                 key={item}
                 href={`/${item.toLowerCase()}`}
                 className={`transition-colors ${
-                  isScrolled ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"
+                  isScrolled
+                    ? "text-black/80 hover:text-black"
+                    : "text-white/80 hover:text-white"
                 }`}
               >
                 {item}
@@ -72,11 +80,12 @@ export function Header() {
             ))}
           </nav>
 
-
           <div className="hidden md:flex items-center space-x-6">
             <button
               className={`transition-colors ${
-                isScrolled ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"
+                isScrolled
+                  ? "text-black/80 hover:text-black"
+                  : "text-white/80 hover:text-white"
               }`}
             >
               ENG
@@ -86,7 +95,6 @@ export function Header() {
         </div>
       </Container>
 
-
       <motion.div
         className={`fixed inset-y-0 left-0 w-full bg-white flex flex-col p-6 transition-all md:hidden shadow-lg`}
         initial={{ x: "-100%" }}
@@ -94,10 +102,12 @@ export function Header() {
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center justify-between w-full mb-20">
-        <span className="text-[22px] md:text-3xl font-bold">Ocean Script</span>
+          <span className="text-[22px] md:text-3xl font-bold">
+            Ocean Script
+          </span>
 
           <button className="p-2" onClick={() => setIsMobileMenuOpen(false)}>
-            <X className="w-6 h-6" />
+          <Image src={x} alt="Menu" width={24} height={24} />
           </button>
         </div>
 
@@ -117,16 +127,27 @@ export function Header() {
               >
                 {item}
               </Link>
-              <span className="text-sm text-blue-600 font-bold">{`0${index + 1}`}</span>
+              <span className="text-sm text-blue-600 font-bold">{`0${
+                index + 1
+              }`}</span>
             </motion.div>
           ))}
         </nav>
 
+<div className="mt-[50px]">
+        <ArrowLeftButton
+          text="Leave a request"
+          className="w-full text-center block md:hidden mt-6"
+        />
+</div>
         <div className="flex-grow"></div>
 
-
         <div className="w-full">
-          <ArrowRightButton text="Leave a request" className="w-full text-center" />
+          <ArrowRightButton
+            text="Leave a request"
+            className="w-full text-center hidden md:block"
+          />
+
         </div>
 
         <div className="mt-6 flex justify-start gap-4">

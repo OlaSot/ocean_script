@@ -8,7 +8,7 @@ import ProjectsGrid from "../ui/ProjectsGrid";
 
 export function Portfolio() {
   return (
-    <section className="py-[150px]">
+    <section className="my-mobile md:my-desktop">
       <Container>
         <SectionHeader title="Portfolio" tagText="Our latest works" tagVariant="black" />
         <ProjectsGrid />

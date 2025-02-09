@@ -4,7 +4,6 @@ import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
-import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
 import { PageHero } from "@/components/ui/PageHero";
 import { Tag } from "@/components/ui/tag";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";

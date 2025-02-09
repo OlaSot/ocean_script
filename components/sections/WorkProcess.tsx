@@ -41,11 +41,13 @@ export function WorkProcess() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[30px] lg:px-[50px] py-6 md:py-[30px] lg:py-[40px] relative text-center md:text-left">
+              <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[30px] lg:px-[50px] py-6 md:py-[30px] lg:py-[40px] relative text-left md:text-center">
                 <span
-                  className={`text-[50px] md:text-[100px] lg:text-[150px] font-extrabold ${
+                  className={`text-[100px] lg:text-[150px] font-extrabold ${
                     index % 2 === 0 ? "text-transparent" : "text-black"
-                  } ${inter.className}`}
+                  } ${
+                    inter.className
+                  } w-full md:w-auto text-left md:text-center`}
                   style={{
                     WebkitTextStroke: index % 2 === 0 ? "2px white" : "",
                   }}
@@ -54,9 +56,9 @@ export function WorkProcess() {
                 </span>
 
                 <span
-                  className={`text-xl md:text-4xl lg:text-[80px] font-bold tracking-wider ${
+                  className={`text-[40px] md:text-4xl lg:text-[80px] font-bold tracking-wider ${
                     index % 2 === 0 ? "text-white" : "text-gray-900"
-                  }`}
+                  } w-full md:w-auto text-left md:text-center`}
                 >
                   {stage.title}
                 </span>

@@ -8,8 +8,6 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Tag } from "@/components/ui/tag";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
 import { motion } from "framer-motion";
-import { Advantages } from "@/components/sections/Advantages";
-import { DirectionsGrid } from "@/components/ui/DirectionsGrid";
 import Directions from "@/components/sections/Directions";
 
 export default function AdvertisingPage() {

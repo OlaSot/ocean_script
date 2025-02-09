@@ -10,7 +10,7 @@ interface ServiceCardProps {
   index: number;
 }
 
-export function ServiceCardHome({ title, description, index }: ServiceCardProps) {
+export function ServiceCardHome({ title, description, index}: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

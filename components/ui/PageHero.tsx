@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Tag } from "./tag";
-import ProjectsGrid from "./ProjectsGrid";
 import ArrowLeftButton from "./arrowLeftBtn";
 interface PageHeroProps {
   title: string;
@@ -20,7 +19,7 @@ export function PageHero({
   tagText, 
 }: PageHeroProps) {
   return (
-    <section className="relative min-h-[45vh] flex items-center justify-center overflow-hidden mb-[150px]">
+    <section className="relative min-h-[65vh] md:min-h-[45vh] flex items-center justify-center overflow-hidden mb-[150px]">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center rounded-b-xl"
         style={{ backgroundImage: `url(${bg})` }}
@@ -32,14 +31,14 @@ export function PageHero({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 inline-block"
+            className="mb-[20px] md:mb-6 inline-block"
           >
             <Tag text={tagText} />
           </motion.div>
         )}
 
         <motion.h1
-          className="text-[70px] md:text-6xl font-bold text-white mb-6"
+          className="text-[45px] md:text-[70px] md:text-6xl font-bold text-white mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -48,7 +47,7 @@ export function PageHero({
         </motion.h1>
 
         <motion.p
-          className="text-lg text-white max-w-4xl mx-auto mb-6"
+          className="text-base md:text-lg text-white max-w-4xl mx-auto mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}

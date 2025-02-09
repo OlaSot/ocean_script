@@ -11,7 +11,6 @@ export function Advantages() {
   return (
     <section className="relative py-20 bg-[url('/CTA.webp')] bg-cover bg-center rounded-[40px]">
       <Container>
-
         <motion.div
           className="mb-8 flex flex-col sm:flex-row items-start sm:items-center sm:justify-between"
           initial={{ opacity: 0 }}
@@ -21,7 +20,6 @@ export function Advantages() {
           <h2 className="text-3xl font-bold text-white">Advantages</h2>
           <Tag text="Advantages" />
         </motion.div>
-
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center">
           {advantages.map((advantage, index) => (
@@ -38,9 +36,8 @@ export function Advantages() {
           ))}
         </div>
 
-
         <div className="mt-[50px] flex justify-center">
-         <ArrowLeftButton text="Leave a request"/>
+          <ArrowLeftButton text="Leave a request" />
         </div>
       </Container>
     </section>
