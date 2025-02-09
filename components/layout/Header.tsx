@@ -95,72 +95,66 @@ export function Header() {
         </div>
       </Container>
 
-      <motion.div
-        className={`fixed inset-y-0 left-0 w-full bg-white flex flex-col p-6 transition-all md:hidden shadow-lg`}
-        initial={{ x: "-100%" }}
-        animate={{ x: isMobileMenuOpen ? "0%" : "-100%" }}
-        transition={{ duration: 0.3 }}
+   <motion.div
+  className="fixed inset-0 bg-white flex flex-col md:hidden shadow-lg overflow-y-auto"
+  initial={{ x: "-100%" }}
+  animate={{ x: isMobileMenuOpen ? "0%" : "-100%" }}
+  transition={{ duration: 0.3 }}
+>
+  <div className="flex-1 p-6 flex flex-col min-h-screen">
+    <div className="flex items-center justify-between mb-12">
+      <span className="text-[22px] font-bold">Ocean Script</span>
+      <button 
+        className="p-2" 
+        onClick={() => setIsMobileMenuOpen(false)}
       >
-        <div className="flex items-center justify-between w-full mb-20">
-          <span className="text-[22px] md:text-3xl font-bold">
-            Ocean Script
-          </span>
+        <Image src={x} alt="Close menu" width={24} height={24} />
+      </button>
+    </div>
 
-          <button className="p-2" onClick={() => setIsMobileMenuOpen(false)}>
-          <Image src={x} alt="Menu" width={24} height={24} />
-          </button>
-        </div>
 
-        <nav className="flex flex-col space-y-6 w-full">
-          {["Services", "Portfolio", "Contacts"].map((item, index) => (
-            <motion.div
-              key={item}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="flex justify-between items-center"
-            >
-              <Link
-                href={`/${item.toLowerCase()}`}
-                className="text-2xl font-bold text-black transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item}
-              </Link>
-              <span className="text-sm text-blue-600 font-bold">{`0${
-                index + 1
-              }`}</span>
-            </motion.div>
-          ))}
-        </nav>
+    <nav className="flex flex-col space-y-6 mb-6">
+      {["Services", "Portfolio", "Contacts"].map((item, index) => (
+        <motion.div
+          key={item}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.1 }}
+          className="flex justify-between items-center"
+        >
+          <Link
+            href={`/${item.toLowerCase()}`}
+            className="text-2xl font-bold text-black transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {item}
+          </Link>
+          <span className="text-sm text-blue-600 font-bold">{`0${
+            index + 1
+          }`}</span>
+        </motion.div>
+      ))}
+    </nav>
 
-<div className="mt-[50px]">
-        <ArrowLeftButton
-          text="Leave a request"
-          className="w-full text-center block md:hidden mt-6"
-        />
-</div>
-        <div className="flex-grow"></div>
 
-        <div className="w-full">
-          <ArrowRightButton
-            text="Leave a request"
-            className="w-full text-center hidden md:block"
-          />
+    <ArrowLeftButton
+      text="Leave a request"
+      className="w-full mb-6"
+    />
 
-        </div>
 
-        <div className="mt-6 flex justify-start gap-4">
-          {["Eng", "Rus", "Ukr"].map((lang) => (
-            <button
-              key={lang}
-              className="border border-black px-4 py-2 rounded-full text-black font-medium transition-colors hover:bg-gray-200"
-            >
-              {lang}
-            </button>
-          ))}
-        </div>
-      </motion.div>
+    <div className="mt-auto flex gap-3">
+      {["Eng", "Rus", "Ukr"].map((lang) => (
+        <button
+          key={lang}
+          className="flex-1 border border-black px-4 py-2 rounded-full text-black font-medium transition-colors hover:bg-gray-100 active:bg-gray-200"
+        >
+          {lang}
+        </button>
+      ))}
+    </div>
+  </div>
+</motion.div>
     </motion.header>
   );
 }
