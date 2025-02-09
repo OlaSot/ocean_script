@@ -198,7 +198,7 @@ export function Contact() {
                         alt="Dropdown arrow"
                         width={20}
                         height={20}
-                        layout="intrinsic"
+                       
                       />
                     </motion.div>
                   </button>

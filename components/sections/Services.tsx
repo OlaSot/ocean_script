@@ -10,26 +10,32 @@ const services = [
   {
     title: "Web Development",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/web-development",
   },
   {
     title: "UI/UX Design",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/ui-ux",
   },
   {
     title: "Advertising",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/advertising",
   },
   {
     title: "CRM and ERP systems",
-    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/crm-erp",
   },
   {
     title: "AI Integration",
-    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/ai-integration",
   },
   {
     title: "Telegram bots",
-    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+    href: "/services/telegram-bots",
   },
 ];
 

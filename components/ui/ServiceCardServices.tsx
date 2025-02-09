@@ -3,12 +3,15 @@
 import { motion } from "framer-motion";
 import ArrowRightButton from "./arrowRightBtn";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface ServiceCardProps {
   title: string;
   description: string;
   index: number;
   image?: string;
+  href: string;
 }
 
 export function ServiceCardServices({
@@ -16,14 +19,18 @@ export function ServiceCardServices({
   description,
   index,
   image,
+  href
 }: ServiceCardProps) {
+
+
   return (
+    <Link href={href} className="block no-underline text-inherit">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className=" relative p-6 rounded-[20px] border border-black bg-white min-h-[370px] flex flex-col justify-between 
+      className=" relative p-6 rounded-[20px] border  bg-white min-h-[370px] flex flex-col justify-between 
       transition duration-300 overflow-hidden bg-[url('/stagesBgWhite.webp')] bg-contain"
     >
       {image && (
@@ -50,5 +57,6 @@ export function ServiceCardServices({
 
       <ArrowRightButton text="Learn more" arrow={true} show={true} />
     </motion.div>
+    </Link>
   );
 }

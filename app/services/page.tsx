@@ -8,33 +8,40 @@ import { ServicesGrid } from "@/components/ui/ServicesGrid";
 const services = [
   {
     title: "Web Development",
-    description: "Build modern and fast websites with our development team.",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-01.png",
+    href: "/services/web-development",
   },
   {
     title: "UI/UX Design",
-    description: "Create intuitive and engaging user experiences.",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-02.png",
+    href: "/services/ui-ux-design",
   },
   {
-    title: "Mobile Apps",
-    description: "Develop high-performance mobile applications.",
+    title: "Advertising",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-03.png",
+    href: "/services/advertising",
+
   },
   {
-    title: "Digital Strategy",
-    description: "Plan and execute effective digital strategies.",
+    title: "CRM and ERP systems",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-04.png",
+    href: "/services/crm-erp",
   },
   {
-    title: "Cloud Solutions",
-    description: "Leverage cloud technologies for scalability.",
+    title: "AI Integration",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-05.png",
+    href: "/services/ai-integration",
   },
   {
-    title: "API Integration",
-    description: "Seamlessly connect your apps with powerful APIs.",
+    title: "Telegram bots",
+    description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-06.png",
+    href: "/services/telegram-bots",
   },
 ];
 
