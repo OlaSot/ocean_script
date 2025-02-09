@@ -9,6 +9,7 @@ import { Tag } from "@/components/ui/tag";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
 import { motion } from "framer-motion";
 import { Advantages } from "@/components/sections/Advantages";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function AdvertisingPage() {
   const logos = [
@@ -61,17 +62,12 @@ export default function AdvertisingPage() {
         <div className="mb-[150px]">
           <div className="flex flex-col md:flex-row gap-5 items-center">
             <div className="flex flex-col gap-6 flex-1">
-              <motion.div
-                className="text-[40px] font-bold text-black flex flex-col gap-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                <div className="inline-flex">
-                  <Tag text={"Service"} variant="black" />
-                </div>
-                <h2>What is it and why?</h2>
-              </motion.div>
+              <SectionHeader
+                title="What is it and why?"
+                tagText="Service"
+                tagVariant="black"
+                textVariant="black"
+              />
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -95,7 +91,6 @@ export default function AdvertisingPage() {
               </motion.div>
             </div>
 
-       
             <div className="flex-1">
               <AdvertisingGrid items={integrations} />
             </div>

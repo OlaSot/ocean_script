@@ -19,7 +19,7 @@ export function PageHero({
   tagText, 
 }: PageHeroProps) {
   return (
-    <section className="relative min-h-[65vh] md:min-h-[45vh] flex items-center justify-center overflow-hidden mb-[150px]">
+    <section className="relative min-h-[70vh] md:min-h-[45vh] flex items-center justify-center overflow-hidden mb-[150px]">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center rounded-b-xl"
         style={{ backgroundImage: `url(${bg})` }}

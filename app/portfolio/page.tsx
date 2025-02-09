@@ -6,7 +6,6 @@ import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { PageHero } from "@/components/ui/PageHero";
 import ProjectsGrid from "@/components/ui/ProjectsGrid";
 
-
 export default function PortfolioPage() {
   const data = [
     "Websites",
@@ -27,8 +26,8 @@ export default function PortfolioPage() {
         tagText="Portfolio"
       />
       <Container>
-        <div>
-          <div className="flex justify-between">
+        <div className="overflow-x-auto whitespace-nowrap">
+          <div className="flex space-x-3 sm:space-x-4 md:space-x-6">
             {data.map((el, index) => (
               <div
                 key={el}
@@ -43,10 +42,9 @@ export default function PortfolioPage() {
         </div>
         <div>
           <ProjectsGrid />
-          <div className="mt-[50px] mb-[150px]" >
+          <div className="mt-[50px] mb-[150px]">
             <ArrowLeftButton text="Learn more" />
           </div>
-          
         </div>
       </Container>
       <Contact />

@@ -11,26 +11,40 @@ export function Footer() {
         <div className=" relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-bold">Ocean Script</h2>
-              <p className="text-sm ">
-                Lorem ipsum dolor sit amet consectetur. Tellus massa vehicula
-                condimentum ut feugiat volutpat sed.
-              </p>
-            </div>
-
-            <div className="space-y-4">
               <h3 className="text-lg font-semibold">Navigation</h3>
               <ul className="space-y-2">
-                {["Cases", "Services", "Contacts", "About us"].map((item) => (
-                  <li key={item}>
-                    <Link
-                      href={`/${item.toLowerCase().replace(" ", "-")}`}
-                      className="text-sm  hover:text-gray-900 transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href="/portfolio" 
+                    className="text-sm hover:text-gray-900 transition-colors"
+                  >
+                    Cases
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services" 
+                    className="text-sm hover:text-gray-900 transition-colors"
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contacts"
+                    className="text-sm hover:text-gray-900 transition-colors"
+                  >
+                    Contacts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about" 
+                    className="text-sm hover:text-gray-900 transition-colors"
+                  >
+                    About us
+                  </Link>
+                </li>
               </ul>
             </div>
 

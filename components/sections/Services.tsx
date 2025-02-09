@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { Container } from "../Container";
 import { SectionHeader } from "../ui/SectionHeader";
 import ArrowBtn from "@/components/ui/arrowLeftBtn";

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/Container";
 import { Tag } from "@/components/ui/tag";
 import ArrowLeftButton from "../ui/arrowLeftBtn";
+import { SectionHeader } from "../ui/SectionHeader";
 
 export function Advantages() {
   const advantages = ["Sales growth", "Loyalty", "Recognition"];
@@ -11,15 +12,12 @@ export function Advantages() {
   return (
     <section className="relative py-20 bg-[url('/CTA.webp')] bg-cover bg-center rounded-[40px]">
       <Container>
-        <motion.div
-          className="mb-8 flex flex-col sm:flex-row items-start sm:items-center sm:justify-between"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-white">Advantages</h2>
-          <Tag text="Advantages" />
-        </motion.div>
+        <SectionHeader
+          title="Advantages"
+          tagText="Advantages"
+          tagVariant="white"
+          textVariant="white"
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center">
           {advantages.map((advantage, index) => (
