@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
+import ContactShortForm from "@/components/sections/ContactShortForm";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
@@ -108,7 +109,7 @@ export default function WebDevelopmentPage() {
       <TypesOfSolutions />
       <Portfolio />
       <Technologies logos={logos} />
-      <Contact />
+      <ContactShortForm />
     </div>
   );
 }

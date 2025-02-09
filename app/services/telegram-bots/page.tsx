@@ -11,6 +11,7 @@ import Directions from "@/components/sections/Directions";
 import ProjectsGrid from "@/components/ui/ProjectsGrid";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import ContactShortForm from "@/components/sections/ContactShortForm";
 
 export default function TelegramPage() {
   const logos = [
@@ -46,7 +47,7 @@ export default function TelegramPage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <div className="text-[40px] font-bold text-black flex flex-col gap-4">
+              <div className="text-xl md:text-3xl font-bold text-black flex flex-col gap-4">
                 <div className="inline-flex">
                   <Tag text={"Service and Advantages"} variant="black" />
                 </div>
@@ -109,7 +110,7 @@ export default function TelegramPage() {
       </section>
       
       <Technologies logos={logos} />
-      <Contact />
+      <ContactShortForm />
     </div>
   );
 }

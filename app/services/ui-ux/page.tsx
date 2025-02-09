@@ -2,31 +2,29 @@
 
 import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
+import ContactShortForm from "@/components/sections/ContactShortForm";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
 import { PageHero } from "@/components/ui/PageHero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Tag } from "@/components/ui/tag";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { motion } from "framer-motion";
 
 export default function WebDevelopmentPage() {
-  const logos = [
-    { src: "/logos/figma.svg", alt: "Figma" },
-  ];
-
+  const logos = [{ src: "/logos/figma.svg", alt: "Figma" }];
 
   const stages = [
     {
       number: "01",
       title: "RESEARCH",
-      expanded: false, 
+      expanded: false,
     },
     { number: "02", title: "PROTOTYPE", expanded: false },
     { number: "03", title: "CONCEPT", expanded: false },
     { number: "04", title: "TEST", expanded: false },
   ];
-
 
   return (
     <div>
@@ -38,18 +36,14 @@ export default function WebDevelopmentPage() {
       />
       <Container>
         <div className="mb-[150px]">
-          <motion.div
-            className="text-3xl font-bold subtitle-container text-black "
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2>Importance of Design</h2>
-            <Tag text={"Design"} variant="black" />
-          </motion.div>
+          <SectionHeader
+            title="Importance of Design"
+            tagText="Design"
+            tagVariant="black"
+            textVariant="black"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-   
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -73,7 +67,6 @@ export default function WebDevelopmentPage() {
               </p>
             </motion.div>
 
-   
             <WorkProcessSteps stages={stages} />
           </div>
         </div>
@@ -81,7 +74,7 @@ export default function WebDevelopmentPage() {
       <TypesOfSolutions />
       <Portfolio />
       <Technologies logos={logos} />
-      <Contact />
+      <ContactShortForm />
     </div>
   );
 }

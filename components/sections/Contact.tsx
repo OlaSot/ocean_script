@@ -56,9 +56,9 @@ export function Contact() {
   }, []);
 
   const inputClasses =
-    "w-full text-base bg-transparent border border-white/40 rounded-full px-[30px] py-[17px] md:py-[25px] text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
+    "w-full text-base bg-transparent border border-white rounded-full px-[30px] py-[17px] md:py-[25px] text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
   const selectClasses =
-    "w-full bg-transparent  text-base border border-white/40 rounded-full px-[30px] py-[17px] md:py-[25px] text-white flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
+    "w-full bg-transparent  text-base border border-white rounded-full px-[30px] py-[17px] md:py-[25px] text-white flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
   const dropdownClasses =
     "absolute left-0 right-0 mt-2 bg-white/10 backdrop-blur-md text-white rounded-[20px] shadow-lg overflow-y-auto z-10 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent";
 

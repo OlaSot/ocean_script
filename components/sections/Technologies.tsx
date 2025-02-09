@@ -22,7 +22,7 @@ export function Technologies({ logos }: TechnologiesProps) {
             className="w-full md:w-1/3"
           >
             <Tag text="Our Technologies" variant="black" />
-            <h2 className="text-[40px] font-bold mt-4">Technologies</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold mt-4">Technologies</h2>
             <p className="text-lg my-[30px]">
               Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.
             </p>

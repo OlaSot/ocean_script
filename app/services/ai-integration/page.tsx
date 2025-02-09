@@ -10,6 +10,7 @@ import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
 import { motion } from "framer-motion";
 import Directions from "@/components/sections/Directions";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import ContactShortForm from "@/components/sections/ContactShortForm";
 
 export default function AdvertisingPage() {
   const logos = [
@@ -87,7 +88,7 @@ export default function AdvertisingPage() {
 
       <Portfolio />
       <Technologies logos={logos} />
-      <Contact />
+      <ContactShortForm />
     </div>
   );
 }

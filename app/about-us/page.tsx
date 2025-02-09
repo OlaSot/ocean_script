@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
 import ValuesSection from "@/components/sections/Values";
 import { PageHero } from "@/components/ui/PageHero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Tag } from "@/components/ui/tag";
 import { motion } from "framer-motion";
 
@@ -36,10 +37,12 @@ export default function AboutUsPage() {
               transition={{ duration: 0.5 }}
               className="text-gray-600 text-lg leading-7"
             >
-              <Tag text="Who we are" variant="black" />
-              <h2 className="text-[32px] font-bold text-black mt-4">
-                Our Mission
-              </h2>
+              <SectionHeader
+                title="Our Mission"
+                tagText="Who we are"
+                tagVariant="black"
+                textVariant="black"
+              />
               <p className="mt-4">
                 Lorem ipsum dolor sit amet consectetur. Convallis arcu nunc nec
                 sagittis ullamcorper adipiscing. Justo gravida non elementum
