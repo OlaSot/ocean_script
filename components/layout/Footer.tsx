@@ -10,6 +10,12 @@ export function Footer() {
       <Container>
         <div className=" relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <h2 className="text-xl font-bold">Ocean Script</h2>
+            <p className="text-sm ">
+              Lorem ipsum dolor sit amet consectetur. Tellus massa vehicula condimentum ut feugiat volutpat sed.
+            </p>
+          </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Navigation</h3>
               <ul className="space-y-2">
@@ -39,7 +45,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/about" 
+                    href="/about-us" 
                     className="text-sm hover:text-gray-900 transition-colors"
                   >
                     About us

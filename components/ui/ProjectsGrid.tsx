@@ -76,13 +76,13 @@ export default function ProjectsGrid() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70" />
             </div>
 
-            <div className="absolute top-4 left-4 flex flex-col items-start gap-2 p-[28px] sm:p-[40px]">
+            <div className="absolute top-0 left-0 flex flex-col items-start gap-2 py-[30px] px-[18px] sm:p-[40px]">
               {project.tags.map((tag, index) => (
                 <Tag key={index} text={tag.text} />
               ))}
             </div>
             
-            <div className="absolute bottom-0 left-0 right-0 p-[42px] bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-[16px] sm:p-[40px] bg-gradient-to-t from-black/80 to-transparent">
               <h3 className="text-[18px] md:text-3xl font-semibold mb-2">
                 {project.title}
               </h3>

@@ -16,19 +16,19 @@ const services = [
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
   },
   {
-    title: "Mobile Apps",
+    title: "Advertising",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
   },
   {
-    title: "Digital Strategy",
+    title: "CRM and ERP systems",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
   },
   {
-    title: "Cloud Solutions",
+    title: "AI Integration",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
   },
   {
-    title: "API Integration",
+    title: "Telegram bots",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentум.",
   },
 ];

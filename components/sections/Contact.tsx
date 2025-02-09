@@ -230,12 +230,12 @@ export function Contact() {
                   </AnimatePresence>
                 </div>
 
-                <div className="flex w-full">
+                <div className="flex flex-col sm:flex-row w-full gap-4 sm:gap-0">
                   <div className="w-full text-left">
-                    <ArrowBtn text={"Continue"} className="w-auto" />
+                    <ArrowBtn text={"Continue"} className="w-full sm:w-auto" />
                   </div>
                   <div className="w-full">
-                    <p className="text-xs text-white/60 text-center">
+                    <p className="text-xs text-white/60 text-center sm:text-left">
                       By clicking the "Send" button, you consent to the
                       processing of personal data.
                     </p>

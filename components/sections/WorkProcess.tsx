@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "../Container";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Inter } from "next/font/google";
+import ArrowLeftButton from "../ui/arrowLeftBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,10 +67,18 @@ export function WorkProcess() {
                 <div className="absolute top-2 right-2 sm:top-4 sm:right-4 w-3 sm:w-4 h-3 sm:h-4 bg-gray-300 rounded-full" />
               </div>
 
-              <div className="absolute bottom-0 right-0 w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-tl-full" />
+              
             </motion.div>
           ))}
         </div>
+        <motion.div
+          className="btn text-center md:mt-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <ArrowLeftButton text={"Learn more"} />
+        </motion.div>
       </Container>
     </section>
   );

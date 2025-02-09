@@ -15,12 +15,12 @@ export function ServiceCardHome({ title, description, index}: ServiceCardProps) 
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 20}}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative h-[216px] p-6 rounded-[20px] border border-white bg-transparent md:min-h-[370px] flex flex-col justify-between 
-      transition duration-300 overflow-hidden cursor-pointer"
+       overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

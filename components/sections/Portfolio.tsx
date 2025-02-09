@@ -10,7 +10,7 @@ export function Portfolio() {
   return (
     <section className="my-mobile md:my-desktop">
       <Container>
-        <SectionHeader title="Portfolio" tagText="Our latest works" tagVariant="black" />
+        <SectionHeader title="Our latest works" tagText="Portfolio" tagVariant="black" />
         <ProjectsGrid />
         <motion.div
           className="btn text-center md:mt-8"

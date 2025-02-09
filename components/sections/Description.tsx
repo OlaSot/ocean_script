@@ -39,20 +39,20 @@ export default function Description() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          <h2 className="text-[20px] sm:text-4xl font-bold text-black mb-4">
             Ocean Script:
             <br />
-            <span className="text-3xl sm:text-4xl font-bold">
+            <span className="text-[20px] sm:text-4xl font-bold">
               Transforming Ideas into Digital Marvels
             </span>
           </h2>
-          <p className="text-lg text-black mb-4">
+          <p className="text-base md:text-lg text-black mb-4">
             Lorem ipsum dolor sit amet consectetur. Tellus mauris vehicula
             condimentum rutrum feugiat volutpat sed. Egestas justo lectus ut
             lacus malesuada leo interdum dolor dignissim nam est.
           </p>
 
-          <p className="text-lg text-black mb-4">
+          <p className="text-base md:text-lg text-black mb-4">
             Lorem ipsum dolor sit amet consectetur. Tellus mauris vehicula
             condimentum rutrum feugiat volutpat sed. Egestas justo lectus ut
             lacus malesuada leo interdum dolor dignissim nam est.
@@ -63,13 +63,13 @@ export default function Description() {
               expanded ? "max-h-[1000px]" : "max-h-0"
             }`}
           >
-            <p className="text-lg text-black mb-4">
+            <p className="text-base md:text-lg text-black mb-4">
               Lorem ipsum dolor sit amet consectetur. Tellus mauris vehicula
               condimentum rutrum feugiat volutpat sed. Egestas justo lectus ut
               lacus malesuada leo interdum dolor dignissim nam est.
             </p>
 
-            <p className="text-lg text-black mb-4">
+            <p className="text-base md:text-lg text-black mb-4">
               Lorem ipsum dolor sit amet consectetur. Tellus mauris vehicula
               condimentum rutrum feugiat volutpat sed. Egestas justo lectus ut
               lacus malesuada leo interdum dolor dignissim nam est.
@@ -78,7 +78,7 @@ export default function Description() {
 
           <button
             onClick={() => setExpanded(!expanded)}
-            className="mt-2 text-btn_color hover:text-blue-800 font-medium transition"
+            className="mt-2 text-btn_color hover:text-blue-800 font-bold transition"
           >
             {expanded ? "Read Less" : "Read More"}
           </button>
