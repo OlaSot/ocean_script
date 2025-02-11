@@ -16,8 +16,8 @@ export default function AdvertisingPage() {
   const logos = [
     { src: "/logos/laravel.svg", alt: "Laravel" },
     { src: "/logos/nuxt.svg", alt: "NuxtJS" },
-    { src: "/logos/go.svg", alt: "Go" },
-    { src: "/logos/mysql.svg", alt: "MySQL" },
+    { src: "/logos/GO.svg", alt: "Go" },
+    { src: "/logos/mySQL.svg", alt: "MySQL" },
     { src: "/logos/postgres.svg", alt: "PostgreSQL" },
     { src: "/logos/mongo.svg", alt: "MongoDB" },
     { src: "/logos/docker.svg", alt: "Docker" },

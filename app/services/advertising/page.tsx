@@ -14,7 +14,7 @@ import ContactShortForm from "@/components/sections/ContactShortForm";
 
 export default function AdvertisingPage() {
   const logos = [
-    { src: "/logos/googleads.svg", alt: "Laravel" },
+    { src: "/logos/GoogleAds.svg", alt: "Laravel" },
     { src: "/logos/fb.svg", alt: "Laravel" },
     { src: "/logos/tiktok.svg", alt: "Laravel" },
     { src: "/logos/pinterest.svg", alt: "Laravel" },
