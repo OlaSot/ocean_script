@@ -53,7 +53,7 @@ export default function WebDevelopmentPage() {
     { src: "/logos/next.svg", alt: "Next.js" },
     { src: "/logos/node.svg", alt: "Node.js" },
     { src: "/logos/mySQL.svg", alt: "MySQL" },
-    { src: "/logos/postgres.svg", alt: "PostgreSQL" },
+    { src: "/logos/postgreS.svg", alt: "PostgreSQL" },
     { src: "/logos/mongo.svg", alt: "MongoDB" },
     { src: "/logos/redis.svg", alt: "Redis" },
     { src: "/logos/NG.svg", alt: "NGINX" },
