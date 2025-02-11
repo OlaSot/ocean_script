@@ -29,7 +29,7 @@ export function ServiceCardHome({ title, description, index, href }: ServiceCard
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="relative h-[216px] p-6 rounded-[20px] border border-white bg-transparent md:min-h-[370px] flex flex-col justify-between 
+        className="relative h-[216px] p-6 rounded-[20px] border border-white bg-transparent md:min-h-[280px] flex flex-col justify-between 
         overflow-hidden cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -43,9 +43,9 @@ export function ServiceCardHome({ title, description, index, href }: ServiceCard
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-3 h-3 rounded-full bg-white"></span>
-            <h3 className="text-[20px] sm:text-[28px] font-bold text-white">{title}</h3>
+            <h3 className="text-[20px] sm:text-[24px] xl:text-[28px] font-bold text-white">{title}</h3>
           </div>
-          <p className="text-[14px] sm:text-[18px] mb-4 text-white">{description}</p>
+          <p className="text-[14px] sm:text-[16px] mb-4 text-white">{description}</p>
         </div>
 
         <div className="relative z-10 hidden sm:block">
