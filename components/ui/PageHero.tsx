@@ -21,7 +21,7 @@ export function PageHero({
   return (
     <section className="relative min-h-[70vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden mb-[150px]">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center rounded-b-xl"
+        className="absolute inset-0 z-0 bg-cover bg-start rounded-b-xl"
         style={{ backgroundImage: `url(${bg})` }}
       />
 

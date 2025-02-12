@@ -22,7 +22,7 @@ export default function PortfolioPage() {
       <PageHero
         title="Our recent projects"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilinpmsis sem cras phasellus ullamcorper varius placerat."
-        bg="/portfolioBg.webp"
+        bg="/ourprojects.jpg"
         tagText="Portfolio"
       />
       <Container>

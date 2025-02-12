@@ -39,7 +39,7 @@ export function Header() {
     >
       <Container>
         <div
-          className={`flex items-center justify-between h-20 transition-all duration-300 ${
+          className={`flex items-center justify-between h-20 transition-all duration-300 gap-[100px] ${
             isScrolled ? "text-black" : "text-white"
           }`}
         >
@@ -64,7 +64,7 @@ export function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-16 2xl:space-x-[100px] ">
             {["Services", "Portfolio", "Contacts"].map((item) => (
               <Link
                 key={item}

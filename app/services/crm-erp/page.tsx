@@ -56,7 +56,7 @@ export default function AdvertisingPage() {
       <PageHero
         title="CRM & ERP - systems"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/crm.webp"
+        bg="/crm.jpg"
         tagText="CRM & ERP"
       />
       <Container>

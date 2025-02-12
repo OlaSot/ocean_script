@@ -35,7 +35,7 @@ export default function TelegramPage() {
       <PageHero
         title="Telegram bots"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/telegram.webp"
+        bg="/tgbots.jpg"
         tagText="Telegram"
       />
       <Container>

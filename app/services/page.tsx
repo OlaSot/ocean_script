@@ -16,7 +16,7 @@ const services = [
     title: "UI/UX Design",
     description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
     image: "figures/Untitled-1-02.png",
-    href: "/services/ui-ux-design",
+    href: "/services/ui-ux",
   },
   {
     title: "Advertising",

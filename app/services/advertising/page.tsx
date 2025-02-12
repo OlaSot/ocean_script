@@ -32,7 +32,7 @@ export default function AdvertisingPage() {
       <PageHero
         title="Advertising"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/advertising.webp"
+        bg="/advers.jpg"
         tagText="Ads"
       />
       <Container>
