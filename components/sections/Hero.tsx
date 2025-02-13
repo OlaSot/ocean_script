@@ -23,7 +23,7 @@ export function Hero() {
         </motion.div>
 
         <motion.h1
-          className="text-[45px] max-w-[350px] md:max-w-[850px] leading-[60px] md:text-7xl md:leading-[100px] font-extrabold my-[22px]"
+          className="text-[45px] max-w-[350px] md:max-w-[850px] leading-[60px] md:text-7xl md:leading-[100px] font-extrabold my-[22px] h1080:text-[60px] h1080:leading-[80px]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -32,7 +32,8 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-base md:text-lg text-gray-300 mb-12 max-w-[350px] md:max-w-[850px] mx-auto"
+          className="text-base md:text-lg text-gray-300 mb-12 max-w-[350px] md:max-w-[850px] mx-auto
+            "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'h1080': { 'raw': '(max-height: 1080px)' }, // Брейкпоинт для экранов <= 1080px
+      },
       rRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -27,3 +30,6 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+
+
+

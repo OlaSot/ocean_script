@@ -26,14 +26,27 @@ export default function PortfolioPage() {
         tagText="Portfolio"
       />
       <Container>
-        <div className="overflow-x-auto whitespace-nowrap">
-          <div className="flex space-x-3 sm:space-x-4 md:space-x-6">
+        {/* Скрываем скролл, но оставляем прокрутку */}
+        <div className="overflow-x-auto whitespace-nowrap scrollbar-hidden">
+          <style>
+            {`
+              /* Для Chrome, Safari */
+              .scrollbar-hidden::-webkit-scrollbar {
+                display: none;
+              }
+              /* Для Firefox */
+              .scrollbar-hidden {
+                scrollbar-width: none;
+              }
+            `}
+          </style>
+          <div className="flex space-x-2 sm:space-x-3 md:space-x-6 lg:space-x-6">
             {data.map((el, index) => (
               <div
                 key={el}
-                className={`font-semibold text-sm rounded-full mb-[50px] px-3 sm:px-[18px] sm:text-[14px] md:text-lg py-2 sm:py-[10px] border-[2.5px] border-black ${
-                  index === 0 ? "bg-btn_color text-white border-blue-500" : ""
-                }`}
+                className={`font-semibold text-xs sm:text-sm md:text-[14px] lg:text-lg rounded-full mb-[50px] 
+                  px-2 sm:px-3 md:px-4 lg:px-[18px] py-1.5 sm:py-2 lg:py-[10px] border-2 sm:border-[2.5px] border-black 
+                  ${index === 0 ? "bg-btn_color text-white border-blue-500" : ""}`}
               >
                 {el}
               </div>
