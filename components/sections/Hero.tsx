@@ -7,10 +7,10 @@ import { Tag } from "../ui/tag";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-screen max-w-full flex flex-col justify-center overflow-hidden rounded-b-[40px]">
+    <section className="relative min-h-screen w-screen max-w-full flex flex-col justify-center overflow-hidden ">
       <div
         className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center w-full h-full"
-        style={{ backgroundImage: "url('/mainPbg.png')" }}
+        style={{ backgroundImage: "url('/mainPbg.jpg')" }}
       ></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center mt-[120px]">

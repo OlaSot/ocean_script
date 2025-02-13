@@ -10,7 +10,10 @@
   /* border: 0.5px solid red;git ad */
 }
 
-
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
 
 /* section {
   border: 2px solid red;

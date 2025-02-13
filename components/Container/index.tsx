@@ -9,7 +9,7 @@ interface ContainerProps {
         className={`w-full max-w-[1920px] mx-auto 
                     px-4 sm:px-6  lg:px-8 
                     xl:px-[80px] 2xl:px-[195px] 
-                    ${className}`}
+                    ${className} h1080:px-[125px]`}
       >
         {children}
       </div>
