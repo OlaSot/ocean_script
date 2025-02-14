@@ -11,7 +11,7 @@ export function Portfolio() {
     <section className="my-mobile md:my-desktop">
       <Container>
         <SectionHeader title="Our latest works" tagText="Portfolio" tagVariant="black" />
-        <ProjectsGrid />
+        <ProjectsGrid  />
         <motion.div
           className="btn text-center md:mt-8"
           initial={{ opacity: 0 }}
