@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { Tag } from "../ui/tag";
 
 interface ProjectsGridProps {
-  hoveredTag: string | null;
+  hoveredTag?: string | null;
 }
 
-// Объект с изображениями для каждого тега
+
 const tagImages: Record<string, string[]> = {
   "Websites": ["/projects/websites1.jpg", "/projects/websites2.jpg"],
   "Online-stores": ["/projects/online-store1.jpg", "/projects/online-store2.jpg"],
@@ -19,7 +19,7 @@ const tagImages: Record<string, string[]> = {
   "App design": ["/projects/app1.jpg", "/projects/app2.jpg"],
 };
 
-// Дефолтные проекты, если нет активного тега
+
 const defaultProjects = [
   {
     title: "Clothes Marketplace",
@@ -52,7 +52,7 @@ export default function ProjectsGrid({ hoveredTag }: ProjectsGridProps) {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
         {defaultProjects.map((project, index) => {
-          // Если есть ховернутый тег, берем первое изображение для него
+ 
           const imageToShow =
             hoveredTag && tagImages[hoveredTag] ? tagImages[hoveredTag][index % tagImages[hoveredTag].length] : project.image;
 
