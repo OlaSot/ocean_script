@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'h1080': { 'raw': '(max-height: 1080px)' }, // Брейкпоинт для экранов <= 1080px
+        'h1080': { 'raw': '(min-width: 768px) and (max-height: 1080px)' }, // Только для ноутбуков
       },
       rRadius: {
         lg: "var(--radius)",
