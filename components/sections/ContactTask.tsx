@@ -11,7 +11,7 @@ export default function ContactTask() {
     "w-full text-base bg-transparent border border-white rounded-full px-[30px] py-[17px] md:py-[25px] text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-btn_color focus:border-transparent transition-shadow appearance-none";
 
   return (
-    <section className="relative py-20 bg-[url('/contacts2.webp')] bg-fixed bg-cover overflow-hidden rounded-[40px] md:rounded-none md:rounded-b-[40px] mb-[100px] text-white">
+    <section className="relative py-20 bg-[url('/contacts2.webp')] bg-fixed bg-cover overflow-hidden rounded-b-[40px]  mb-[100px] text-white">
       <Container>
         <div className="absolute top-[80px] left-[-100px] w-60 h-60 pointer-events-none select-none">
           <Image
@@ -19,11 +19,11 @@ export default function ContactTask() {
             alt="Decorative element"
             width={300}
             height={300}
-            className="object-cover"
+             className="hidden sm:block object-cover"
             priority
           />
         </div>
-        <div className="absolute bottom-20 right-[-80px] w-60 h-60 pointer-events-none select-none">
+        <div className="absolute top-[5px] right-[-90px]  md:bottom-20 md:right-[-80px] w-60 h-60 pointer-events-none select-none">
           <Image
             src="/figures/Untitled-1-02.png"
             alt="Decorative element"

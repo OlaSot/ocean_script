@@ -67,8 +67,8 @@ export default function AdvertisingPage() {
                 </p>
               </motion.div>
             </div>
-
-            <div className="flex-1">
+            {/* <div className="flex flex-col sm:items-start md:items-center w-full"> */}
+            <div className="flex flex-col w-full sm:items-start md:flex-1">
               <AdvertisingGrid items={advertisingItems} />
             </div>
           </div>

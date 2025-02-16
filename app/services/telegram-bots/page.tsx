@@ -12,8 +12,32 @@ import ProjectsGrid from "@/components/ui/ProjectsGrid";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import ContactShortForm from "@/components/sections/ContactShortForm";
+import { ServicesGrid } from "@/components/ui/ServicesGrid";
 
 export default function TelegramPage() {
+
+  const services = [
+
+    {
+      title: "CRM",
+      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      image: "/figures/Untitled-1-06.png",
+      href: "/services/crm-erp",
+    },
+    {
+      title: "Payment systems",
+      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      image: "/figures/Untitled-1-01.png",
+      href: "/services/payment-systems",
+    },
+    {
+      title: "Websites",
+      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      image: "/figures/Untitled-1-04.png",
+      href: "/services/websites",
+    },
+  ];
+
   const logos = [
     { src: "/logos/python.svg", alt: "python" },
     { src: "/logos/docker.svg", alt: "Docker" },
@@ -83,7 +107,17 @@ export default function TelegramPage() {
         </div>
       </Container>
 
-      <Directions />
+          <Container>
+          <SectionHeader
+            title="Integration with"
+            tagText="Integration"
+            tagVariant="black"
+            textVariant="black"
+          />
+            <div >
+              <ServicesGrid services={services} />
+            </div>
+          </Container>
       
       <section className="py-[150px]">
         <Container>

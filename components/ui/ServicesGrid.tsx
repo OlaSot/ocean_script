@@ -17,7 +17,8 @@ interface ServicesGridProps {
 
 export function ServicesGrid({ services }: ServicesGridProps) {
   const pathname = usePathname(); 
-  const isServicesPage = pathname === "/services";
+  const isServicesPage = pathname === "/services" || pathname === "/services/telegram-bots";
+
 
   return (
     <div className="w-full">

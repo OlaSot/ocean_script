@@ -23,8 +23,8 @@ export function ServiceCardServices({
   return (
     <Link href={href} className="block no-underline text-inherit">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }} // ❌ Убрали "прыжок" по Y
+        whileInView={{ opacity: 1 }} // ✅ Только появление
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
         className="relative p-5 rounded-[20px] border bg-white md:min-h-[280px] flex flex-col justify-between 
