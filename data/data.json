@@ -1,0 +1,36 @@
+{
+  "siteData": {
+    "name": "allgaeu-travel.com",
+    "mainpage": "https://www.allgaeu-travel.com/",
+    "location": "Allgäu",
+    "description": "Reiseportal für Allgäu "
+  },
+  "logos": [
+    { "src": "/logos/GoogleAds.svg", "alt": "Google Ads" },
+    { "src": "/logos/fb.svg", "alt": "Facebook" },
+    { "src": "/logos/tiktok.svg", "alt": "TikTok" },
+    { "src": "/logos/pinterest.svg", "alt": "Pinterest" }
+  ],
+  "heroSection": {
+    "bg": "/web-dev.webp",
+    "tagText": "Case"
+  },
+  "sections": 
+    {
+
+      "gridValues": {
+        "category": "UI/UX Design",
+        "location": "Ukraine",
+        "price": "2000$",
+        "timeline": "1 Month"
+      },
+      "description": "Lorem ipsum dolor sit amet consectetur. Convallis arcu nunc nec sagittis ullamcorper adipiscing. Justo gravida non elementum enim. Nullam vulputate varius id ullamcorper..."
+    }
+  ,
+  "images": [
+    { "alt": "main", "src": "/image 20.png" },
+    { "alt": "main", "src": "/Img.png" },
+    { "alt": "Laptop Mockup", "src": "/mainpagescreen.png" },
+    { "alt": "Mobile Mockup", "src": "/mob2.png" }
+  ]
+}

@@ -12,6 +12,17 @@ const config: Config = {
       screens: {
         'h1080': { 'raw': '(min-width: 768px) and (max-height: 1080px)' }, // Только для ноутбуков
       },
+      rotate: {
+        '30': '30deg', 
+        '35': '35deg', 
+        '40': '40deg',  
+        '60': '60deg',  
+        '75': '75deg',  
+        '180': '180deg',  
+        '200': '200deg',  
+
+        '270': '270deg',  
+      },
       rRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

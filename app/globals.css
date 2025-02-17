@@ -38,3 +38,47 @@ div {
 .white-section-padding {
   @apply py-[100px] sm:py-[150px]
 }
+
+
+.cube-wrap {
+  perspective: 2000px; /* Увеличиваем глубину перспективы */
+  perspective-origin: center left; /* Центрируем точку обзора */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cube-l {
+  transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(1)  translateX(-30%) translateY(-20%);
+  transform-style: preserve-3d; /* Включает 3D-эффект */
+  width: 2200px; /* Настраиваемая ширина */
+  height: 900px; /* Настраиваемая высота */
+  /* background: url('/mainpagescreen.png') no-repeat center/cover; */
+  
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  position: relative;
+}
+.cube-m {
+  transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(1)  translateX(-30%) translateY(-20%);
+  transform-style: preserve-3d; 
+  width: 2200px; 
+  height: 250px; 
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  position: relative;
+}
+.cube.laptop {
+  transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.8) translateX(-40%) translateY(-20%);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.cube.mobile {
+  transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.8) translate(-7%, -40%);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+

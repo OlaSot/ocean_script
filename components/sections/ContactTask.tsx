@@ -13,23 +13,24 @@ export default function ContactTask() {
   return (
     <section className="relative py-20 bg-[url('/contacts2.webp')] bg-fixed bg-cover overflow-hidden rounded-b-[40px]  mb-[100px] text-white">
       <Container>
-        <div className="absolute top-[80px] left-[-100px] w-60 h-60 pointer-events-none select-none">
+        <div className="absolute top-[80px] left-[-60px] w-60 h-60 pointer-events-none select-none">
           <Image
-            src="/figures/Untitled-1-04.png"
+            src="/cilindr.png"
             alt="Decorative element"
-            width={300}
-            height={300}
-             className="hidden sm:block object-cover"
+            width={200}
+            height={200}
+            className="hidden sm:block object-cover rotate-75" 
             priority
           />
         </div>
-        <div className="absolute top-[5px] right-[-90px]  md:bottom-20 md:right-[-80px] w-60 h-60 pointer-events-none select-none">
+        <div className="absolute top-[5px] right-[-90px] md:top-auto md:bottom-[150px] md:right-[-80px] w-60 h-60">
+
           <Image
-            src="/figures/Untitled-1-02.png"
+            src="/figure1.png"
             alt="Decorative element"
             width={300}
             height={300}
-            className="object-cover"
+            className="object-cover rotate-200"
             priority
           />
         </div>

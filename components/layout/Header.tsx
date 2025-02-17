@@ -52,7 +52,7 @@ export function Header() {
             {isMobileMenuOpen ? (
               <Image src={x} alt="Menu" width={24} height={24} />
             ) : (
-              <Image src={burgerIcon} alt="Menu" width={24} height={24} />
+              <Image src={burgerIcon} alt="Menu" width={24} height={24} className={`${isScrolled ? "" : "filter invert"}`} />
             )}
           </button>
 
