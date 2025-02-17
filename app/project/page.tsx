@@ -3,14 +3,12 @@
 import { useState, useEffect } from "react";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/Container";
-import Link from "next/link";
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Technologies } from "@/components/sections/Technologies";
 import { ImgContainer } from "@/components/ImgContainer";
 import { Contact } from "@/components/sections/Contact";
 import siteData from "@/data/data.json";
-import { ArrowLeft } from "lucide-react";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { motion } from "framer-motion";
 

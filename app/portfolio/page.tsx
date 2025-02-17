@@ -54,7 +54,7 @@ export default function PortfolioPage() {
 
     
         <div className="mt-[50px]">
-          <ProjectsGrid selectedCategory={selectedCategory} />
+        <ProjectsGrid selectedCategory={selectedCategory} />
           <div className="mt-[50px] mb-[150px]">
             <ArrowLeftButton text="Learn more" />
           </div>
