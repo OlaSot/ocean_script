@@ -1,0 +1,165 @@
+{
+    "categories": [
+      "Websites",
+      "Online-stores",
+      "Landing pages",
+      "CRM-systems",
+      "Branding and logo",
+      "App design"
+    ],
+    "projects": {
+      "Websites": [
+        {
+          "title": "Clothes Marketplace",
+          "description": "E-commerce web store",
+          "image": "/Project card.webp",
+          "tags": ["Marketplace", "E-commerce", "Responsive Design"]
+        },
+        {
+          "title": "Ukrainemart",
+          "description": "The first Ukrainian B2B platform for export",
+          "image": "/Project card (1).webp",
+          "tags": ["B2B", "Business Solutions", "Performance Optimization"]
+        },
+        {
+          "title": "Size CRM",
+          "description": "CRM system for businesses",
+          "image": "/Project card (2).webp",
+          "tags": ["CRM", "Database Management", "User Roles"]
+        },
+        {
+          "title": "Clickwerk",
+          "description": "Mounting systems with pixel strength",
+          "image": "/Project card (3).webp",
+          "tags": ["Industrial", "Technical UI", "SEO Optimized"]
+        }
+      ],
+      "Online-stores": [
+        {
+          "title": "Fashion Store",
+          "description": "E-commerce website for clothing",
+          "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+          "tags": ["Fashion", "Online Shopping", "Modern UI"]
+        },
+        {
+          "title": "Electronics Store",
+          "description": "Online shop for gadgets",
+          "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+          "tags": ["Tech", "Product Listings", "Secure Payments"]
+        },
+                {
+            "title": "Fashion Store",
+            "description": "E-commerce website for clothing",
+            "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+            "tags": ["Fashion", "Online Shopping", "Modern UI"]
+          },
+          {
+            "title": "Electronics Store",
+            "description": "Online shop for gadgets",
+            "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+            "tags": ["Tech", "Product Listings", "Secure Payments"]
+          }
+      ],
+      "Landing pages": [
+        {
+          "title": "Marketing Page",
+          "description": "High conversion landing page",
+          "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+          "tags": ["Lead Generation", "High Conversion", "A/B Testing"]
+        },
+        {
+          "title": "Startup Page",
+          "description": "Startup launch page",
+          "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+          "tags": ["Startup", "Minimal Design", "Pitch Deck"]
+        },        {
+            "title": "Marketing Page",
+            "description": "High conversion landing page",
+            "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+            "tags": ["Lead Generation", "High Conversion", "A/B Testing"]
+          },
+          {
+            "title": "Startup Page",
+            "description": "Startup launch page",
+            "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+            "tags": ["Startup", "Minimal Design", "Pitch Deck"]
+          }
+      ],
+      "CRM-systems": [
+        {
+          "title": "Business CRM",
+          "description": "CRM system for large companies",
+          "image": "https://plus.unsplash.com/premium_photo-1737812130718-c08efbd80e86?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "tags": ["Enterprise", "Workflow Automation", "Data Security"]
+        },
+        {
+          "title": "Freelance CRM",
+          "description": "CRM system for freelancers",
+          "image": "https://plus.unsplash.com/premium_photo-1737812130718-c08efbd80e86?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "tags": ["Freelancer", "Task Management", "Invoicing"]
+        },         {
+            "title": "Business CRM",
+            "description": "CRM system for large companies",
+            "image": "https://plus.unsplash.com/premium_photo-1737812130718-c08efbd80e86?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "tags": ["Enterprise", "Workflow Automation", "Data Security"]
+          },
+          {
+            "title": "Freelance CRM",
+            "description": "CRM system for freelancers",
+            "image": "https://plus.unsplash.com/premium_photo-1737812130718-c08efbd80e86?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "tags": ["Freelancer", "Task Management", "Invoicing"]
+          }
+      ],
+      "Branding and logo": [
+        {
+          "title": "Brand Identity",
+          "description": "Full branding package",
+          "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+          "tags": ["Logo Design", "Corporate Identity", "Typography"]
+        },
+        {
+          "title": "Minimal Logo",
+          "description": "Minimalistic logo design",
+          "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+          "tags": ["Flat Design", "Vector Art", "Brand Recognition"]
+        },        {
+            "title": "Brand Identity",
+            "description": "Full branding package",
+            "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+            "tags": ["Logo Design", "Corporate Identity", "Typography"]
+          },
+          {
+            "title": "Minimal Logo",
+            "description": "Minimalistic logo design",
+            "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+            "tags": ["Flat Design", "Vector Art", "Brand Recognition"]
+          }
+      ],
+      "App design": [
+        {
+          "title": "Fitness App",
+          "description": "UI/UX design for fitness application",
+          "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+          "tags": ["Health", "Workout Tracker", "Push Notifications"]
+        },
+        {
+          "title": "Finance Tracker",
+          "description": "Finance management app design",
+          "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+          "tags": ["FinTech", "Expense Tracking", "Dark Mode"]
+        },        {
+            "title": "Fitness App",
+            "description": "UI/UX design for fitness application",
+            "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+            "tags": ["Health", "Workout Tracker", "Push Notifications"]
+          },
+          {
+            "title": "Finance Tracker",
+            "description": "Finance management app design",
+            "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+            "tags": ["FinTech", "Expense Tracking", "Dark Mode"]
+          }
+      ]
+    }
+  }
+  
