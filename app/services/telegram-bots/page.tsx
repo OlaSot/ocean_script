@@ -129,7 +129,7 @@ export default function TelegramPage() {
               textVariant="black"
             />
 
-            <ProjectsGrid />
+            <ProjectsGrid selectedCategory="all"/>
 
             <motion.div
               className="btn text-center mt-8"
