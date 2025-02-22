@@ -155,55 +155,57 @@ export default function AllgaeuTravelPage() {
 
         {/* Блок с текстом и картинками */}
         <section className="my-20">
+  <motion.div
+    initial={{ y: 20, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <div className="flex flex-wrap justify-between items-center">
+      {/* Левая колонка с заголовком */}
+      <div className="w-full md:w-1/2">
+        <Tag text={"Case"} variant="black" />
+        <h2 className="text-2xl mt-[20px] sm:text-4xl sm:text-left font-bold mb-6 leading-snug md:leading-tight lg:leading-tight">
+          Some title will be here I think
+        </h2>
+      </div>
+
+      {/* Правая колонка с текстом */}
+      <div className="w-full md:w-1/2">
+        <p className="text-base md:text-lg max-w-4xl mx-auto mb-6">
+          Lorem ipsum dolor sit amet consectetur. Cursus et eu nunc nec sagittis
+          elementum interdum. Ante gravida eu sed elementum sem. Natum nunc eu
+          cursus elementum sed. Sed elementum cursus elementum sed.
+        </p>
+      </div>
+    </div>
+
+    {/* Блок с квадратными изображениями */}
+    <ImgContainer>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {siteData.squareImages.map((image, index) => (
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="rounded-2xl overflow-hidden shadow-lg aspect-square mt-[50px]"
           >
-            <div className="flex flex-wrap justify-between items-center">
-              {/* Левая колонка с заголовком */}
-              <div className="w-full md:w-1/2 ">
-                <Tag text={"Case"} variant="black" />
-                <h2 className="text-2xl mt-[20px] sm:text-4xl  sm:text-left font-bold mb-6 leading-snug md:leading-tight lg:leading-tight">
-                  Some title will be here I think
-                </h2>
-              </div>
-
-              {/* Правая колонка с текстом */}
-              <div className="w-full md:w-1/2 ">
-                <p className="text-base md:text-lg max-w-4xl mx-auto mb-6">
-                  Lorem ipsum dolor sit amet consectetur. Cursus et eu nunc nec
-                  sagittis elementum interdum. Ante gravida eu sed elementum
-                  sem. Natum nunc eu cursus elementum sed. Sed elementum cursus
-                  elementum sed.
-                </p>
-              </div>
-            </div>
-
-            {/* Блок с квадратными изображениями */}
-            <ImgContainer>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                {siteData.squareImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="rounded-2xl overflow-hidden shadow-lg aspect-square mt-[50px]"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={400}
-                      height={400}
-                      objectFit="cover"
-                      className="w-full h-full"
-                    />
-                  </div>
-                ))}
-              </div>
-            </ImgContainer>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={400}
+              height={400}
+              objectFit="cover"
+              className="w-full h-full"
+            />
           </motion.div>
-        </section>
-
+        ))}
+      </div>
+    </ImgContainer>
+  </motion.div>
+</section>
         <section className="my-10">
           {/* Заголовок */}
           <SectionHeader
@@ -213,27 +215,31 @@ export default function AllgaeuTravelPage() {
             textVariant="black"
           />
 
-          <ImgContainer className="min-h-[700px] flex flex-col justify-center">
-            <div className="mt-10 grid grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
-              {siteData.mobImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`relative w-full max-w-[275px] aspect-[9/16] bg-gray-200 rounded-[40px] ${
-                    index === 1 || index === 3 ? "top-24" : ""
-                  }`}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    quality={100}
-                  />
-                </div>
-              ))}
-            </div>
-          </ImgContainer>
+<ImgContainer className="min-h-[700px] flex flex-col justify-center">
+  <div className="mt-10 grid grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
+    {siteData.mobImages.map((image, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className={`relative w-full max-w-[275px] aspect-[9/16] bg-gray-200 rounded-[40px] ${
+          index === 1 || index === 3 ? "top-24" : ""
+        }`}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          className="object-cover object-top"
+          priority
+          quality={100}
+        />
+      </motion.div>
+    ))}
+  </div>
+</ImgContainer>
         </section>
 
         {/* Блок для десктопов */}
