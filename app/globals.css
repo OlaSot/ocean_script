@@ -82,3 +82,52 @@ div {
   z-index: 2;
 }
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .cube-wrap {
+    height: 60vh;
+    perspective: 1000px;
+    perspective-origin: 50% 30%;
+    margin-top: 2rem;
+  }
+
+  .cube-l {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(0.3) translateX(-30%) translateY(-20%);
+  }
+
+  .cube-m {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(0.3) translateX(-30%) translateY(-20%);
+  }
+
+  .cube.laptop {
+    transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.15) translateX(-40%) translateY(-20%);
+  }
+
+  .cube.mobile {
+    transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.15) translate(-7%, -40%);
+  }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+  .cube-wrap {
+    height: 50vh;
+    perspective: 800px;
+  }
+
+  .cube-l {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(0.2) translateX(-30%) translateY(-20%);
+  }
+
+  .cube-m {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(-20deg) scale(0.2) translateX(-30%) translateY(-20%);
+  }
+
+  .cube.laptop {
+    transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.1) translateX(-40%) translateY(-20%);
+  }
+
+  .cube.mobile {
+    transform: rotateX(40deg) rotateY(-10deg) rotateZ(-30deg) scale(0.1) translate(-7%, -40%);
+  }
+}

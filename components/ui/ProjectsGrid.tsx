@@ -11,18 +11,22 @@ import { ProjectsData, Project } from "@/types/types"
 const projectsData: ProjectsData = projectsRaw as ProjectsData;
 
 interface ProjectsGridProps {
-  selectedCategory?: string;
+  selectedCategory: string;
 }
 
 export default function ProjectsGrid({ selectedCategory }: ProjectsGridProps) {
   const [currentProjects, setCurrentProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    if (!selectedCategory) return; 
-
-    const projects = projectsData.projects[selectedCategory as keyof typeof projectsData.projects] || [];
-    setCurrentProjects(projects);
+    if (selectedCategory === "all") {
+      const allProjects = Object.values(projectsData.projects).flat();
+      setCurrentProjects(allProjects);
+    } else {
+      const projects = projectsData.projects[selectedCategory as keyof typeof projectsData.projects] || [];
+      setCurrentProjects(projects);
+    }
   }, [selectedCategory]);
+  
 
   return (
     <div>
