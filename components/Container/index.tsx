@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 interface ContainerProps {
@@ -6,25 +8,40 @@ interface ContainerProps {
 }
 
 export function Container({ children, className = "" }: ContainerProps) {
-  const [paddingClass, setPaddingClass] = useState("");
+  const [paddingClass, setPaddingClass] = useState("px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]");
 
   useEffect(() => {
     const updatePadding = () => {
-      if (window.innerHeight < 1080) {
-        setPaddingClass("px-4 sm:px-6 lg:px-8 xl:px-[80px] 2xl:px-[195px]");
-      } else {
-        setPaddingClass("px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]");
+      const newPaddingClass = window.innerHeight < 1080
+        ? "px-4 sm:px-6 lg:px-8 xl:px-[80px] 2xl:px-[195px]"
+        : "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]";
+      
+      if (newPaddingClass !== paddingClass) {
+        setPaddingClass(newPaddingClass);
       }
     };
 
+   
     updatePadding();
-    window.addEventListener("resize", updatePadding);
 
-    return () => window.removeEventListener("resize", updatePadding);
-  }, []);
+
+    let timeoutId: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(updatePadding, 100);
+    };
+
+    window.addEventListener("resize", debouncedResize);
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+      clearTimeout(timeoutId);
+    };
+  }, [paddingClass]);
 
   return (
-    <div className={`w-full max-w-[1920px] mx-auto ${paddingClass} ${className}`}>
+    <div 
+      className={`mx-auto w-full max-w-[1920px] transition-[padding] duration-300 ${paddingClass} ${className}`}
+    >
       {children}
     </div>
   );
