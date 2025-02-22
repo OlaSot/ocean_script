@@ -73,6 +73,86 @@ export default function AllgaeuTravelPage() {
           </ImgContainer>
         </motion.div>
 
+        <section className="my-10">
+          <SectionHeader
+            title={"Some title will be here i think"}
+            tagText={"Case"}
+            tagVariant="black"
+            textVariant="black"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
+            <motion.div
+              className="space-y-4"
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="grid grid-rows-4 gap-y-4 text-base md:text-lg">
+                {/* Category */}
+                <div className="flex items-center space-x-6">
+                  <span className="font-medium  w-[100px]">Category:</span>
+                  <span className="text-btn_color font-semibold">
+                    {siteData.sections.gridValues?.category}
+                  </span>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center space-x-6">
+                  <span className="font-medium  w-[100px]">Location:</span>
+                  <span className="text-btn_color font-semibold">
+                    {siteData.sections.gridValues?.location}
+                  </span>
+                </div>
+
+                {/* Price */}
+                <div className="flex items-center space-x-6">
+                  <span className="font-medium w-[100px]">Price:</span>
+                  <span className="text-btn_color font-semibold">
+                    {siteData?.sections.gridValues.price}
+                  </span>
+                </div>
+
+                {/* Timeline */}
+                <div className="flex items-center space-x-6">
+                  <span className="font-medium  w-[100px]">Timeline:</span>
+                  <span className="text-btn_color font-semibold">
+                    {siteData.sections.gridValues.timeline}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p> {siteData.sections.description}</p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <ImgContainer>
+              <Image
+                alt={siteData.images[1].alt}
+                src={siteData.images[1].src}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
+              />
+            </ImgContainer>
+          </motion.div>
+        </section>
+
         {/* Блок с текстом и картинками */}
         <section className="my-20">
           <motion.div
@@ -81,14 +161,13 @@ export default function AllgaeuTravelPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="py-4 flex flex-wrap justify-between items-center">
+            <div className="flex flex-wrap justify-between items-center">
               {/* Левая колонка с заголовком */}
               <div className="w-full md:w-1/2 ">
                 <Tag text={"Case"} variant="black" />
-                <h2 className="text-2xl sm:text-4xl  sm:text-left font-bold mb-6 leading-snug md:leading-tight lg:leading-tight">
-  Some title will be here I think
-</h2>
-
+                <h2 className="text-2xl mt-[20px] sm:text-4xl  sm:text-left font-bold mb-6 leading-snug md:leading-tight lg:leading-tight">
+                  Some title will be here I think
+                </h2>
               </div>
 
               {/* Правая колонка с текстом */}
@@ -104,34 +183,57 @@ export default function AllgaeuTravelPage() {
 
             {/* Блок с квадратными изображениями */}
             <ImgContainer>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg aspect-square">
-                  <Image
-                    src={
-                      siteData.images[4]?.src ||
-                      "https://images.unsplash.com/photo-1682687220742-aba19b51f319"
-                    }
-                    alt="Design preview 1"
-                    layout="fill"
-                    objectFit="cover"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg aspect-square">
-                  <Image
-                    src={
-                      siteData.images[5]?.src ||
-                      "https://images.unsplash.com/photo-1682687220742-aba19b51f319"
-                    }
-                    alt="Design preview 2"
-                    layout="fill"
-                    objectFit="cover"
-                    className="w-full h-full"
-                  />
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                {siteData.squareImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl overflow-hidden shadow-lg aspect-square mt-[50px]"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={400}
+                      objectFit="cover"
+                      className="w-full h-full"
+                    />
+                  </div>
+                ))}
               </div>
             </ImgContainer>
           </motion.div>
+        </section>
+
+        <section className="my-10">
+          {/* Заголовок */}
+          <SectionHeader
+            title="Some title"
+            tagText="Case"
+            tagVariant="black"
+            textVariant="black"
+          />
+
+          <ImgContainer className="min-h-[700px] flex flex-col justify-center">
+            <div className="mt-10 grid grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
+              {siteData.mobImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`relative w-full max-w-[275px] aspect-[9/16] bg-gray-200 rounded-[40px] ${
+                    index === 1 || index === 3 ? "top-24" : ""
+                  }`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    quality={100}
+                  />
+                </div>
+              ))}
+            </div>
+          </ImgContainer>
         </section>
 
         {/* Блок для десктопов */}
