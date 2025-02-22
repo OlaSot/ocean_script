@@ -12,7 +12,7 @@
     { "src": "/logos/pinterest.svg", "alt": "Pinterest" }
   ],
   "heroSection": {
-    "bg": "/web-dev.webp",
+    "bg": "https://images.unsplash.com/photo-1739643247007-044e2623ca98?q=80&w=1229&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "tagText": "Case"
   },
   "sections": 
