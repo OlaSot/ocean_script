@@ -1,5 +1,3 @@
-"use client";
-
 import ProjectUi from "@/components/ProjectUi";
 import { Project } from "@/types/types";
 
