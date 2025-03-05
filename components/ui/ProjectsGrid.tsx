@@ -20,7 +20,7 @@ export default function ProjectsGrid({ selectedCategory }: ProjectsGridProps) {
       setLoading(true);
       try {
         let projects: Project[] = [];
-
+  
         if (selectedCategory === "all") {
           const categories = [
             "websites",
@@ -32,16 +32,21 @@ export default function ProjectsGrid({ selectedCategory }: ProjectsGridProps) {
           ];
           const allProjects = await Promise.all(
             categories.map((category) =>
-              import(`@/data/projects/${category}.json`).then((mod) => mod.default)
+              fetch(`/projects/${category}.json`).then((res) => res.json())
             )
           );
           projects = allProjects.flat();
         } else {
           const categoryKey = selectedCategory.toLowerCase().replace(/\s+/g, "-");
-          const dataModule = await import(`@/data/projects/${categoryKey}.json`);
-          projects = dataModule.default;
+          const response = await fetch(`/projects/${categoryKey}.json`);
+          
+          if (!response.ok) {
+            throw new Error(`Не удалось загрузить ${categoryKey}.json`);
+          }
+          
+          projects = await response.json();
         }
-
+  
         setCurrentProjects(projects);
       } catch (error) {
         console.error("Ошибка загрузки проектов:", error);
@@ -50,10 +55,10 @@ export default function ProjectsGrid({ selectedCategory }: ProjectsGridProps) {
         setLoading(false);
       }
     };
-
+  
     loadProjects();
   }, [selectedCategory]);
-
+  
   if (loading) {
     return <div>Загрузка проектов...</div>;
   }
