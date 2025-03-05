@@ -8,35 +8,35 @@ interface ContainerProps {
 }
 
 export function Container({ children, className = "" }: ContainerProps) {
-  const [paddingClass, setPaddingClass] = useState("px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]");
+  const [paddingClass, setPaddingClass] = useState("");
 
   useEffect(() => {
-    const updatePadding = () => {
-      const newPaddingClass = window.innerHeight < 1080
+    const getPaddingClass = () => {
+      return window.innerHeight < 1080
         ? "px-4 sm:px-6 lg:px-8 xl:px-[80px] 2xl:px-[195px]"
         : "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]";
-      
-      if (newPaddingClass !== paddingClass) {
-        setPaddingClass(newPaddingClass);
-      }
     };
 
-   
+    const updatePadding = () => {
+      setPaddingClass(getPaddingClass());
+    };
+
+
     updatePadding();
 
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: NodeJS.Timeout | null = null;
     const debouncedResize = () => {
-      clearTimeout(timeoutId);
+      if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(updatePadding, 100);
     };
 
     window.addEventListener("resize", debouncedResize);
     return () => {
       window.removeEventListener("resize", debouncedResize);
-      clearTimeout(timeoutId);
+      if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [paddingClass]);
+  }, []);
 
   return (
     <div 
