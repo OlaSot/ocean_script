@@ -15,16 +15,23 @@ export async function generateStaticParams() {
   let allProjects: Project[] = [];
 
   for (const category of categories) {
-    const projects = await import(`@/data/projects/${category}.json`).then(
-      (mod) => mod.default as Project[]
-    );
-    allProjects = [...allProjects, ...projects];
+    try {
+      const response = await fetch(`https://your-domain.com/projects/${category}.json`);
+      if (!response.ok) {
+        throw new Error(`Не удалось загрузить ${category}.json`);
+      }
+      const projects: Project[] = await response.json();
+      allProjects = [...allProjects, ...projects];
+    } catch (error) {
+      console.error(`Ошибка загрузки данных для ${category}:`, error);
+    }
   }
 
   return allProjects.map((project) => ({
     projectId: project.projectId,
   }));
 }
+
 
 export default function ProjectPage({ params }: { params: { projectId: string } }) {
   return <ProjectUi projectId={params.projectId} />;
