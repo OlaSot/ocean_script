@@ -26,7 +26,7 @@ export default function ProjectUi({ projectId }: ProjectUiProps) {
     const loadData = async () => {
       setLoading(true);
       try {
-        const dataModule = await import(`@/data/siteData/${projectId}.json`);
+        const dataModule = await import(`@/data/sitedata/${projectId}.json`);
         setData(dataModule.default);
       } catch (error) {
         console.error("Ошибка загрузки данных проекта:", error);

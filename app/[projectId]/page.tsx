@@ -15,11 +15,8 @@ export async function generateStaticParams() {
 
   for (const category of categories) {
     try {
-      const response = await fetch(`/projects/${category}.json`);
-      if (!response.ok) {
-        throw new Error(`Не удалось загрузить ${category}.json`);
-      }
-      const projects: Project[] = await response.json();
+      const datamodule = await import(`@/data/projects/${category}.json`);
+      const projects: Project[] = datamodule.default as Project[];
       allProjects = [...allProjects, ...projects];
     } catch (error) {
       console.error(`Ошибка загрузки данных для ${category}:`, error);

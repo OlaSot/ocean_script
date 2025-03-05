@@ -32,22 +32,14 @@ export default function ProjectsGrid({ selectedCategory }: ProjectsGridProps) {
           ];
           const allProjects = await Promise.all(
             categories.map((category) =>
-              fetch(`/projects/${category}.json`).then((res) => {
-                if (!res.ok) throw new Error(`Не удалось загрузить ${category}.json`);
-                return res.json();
-              })
+              import(`@/data/projects/${category}.json`).then((mod) => mod.default as Project[])
             )
           );
           projects = allProjects.flat();
         } else {
           const categoryKey = selectedCategory.toLowerCase().replace(/\s+/g, "-");
-          const response = await fetch(`/projects/${categoryKey}.json`); // 
-
-          if (!response.ok) {
-            throw new Error(`Не удалось загрузить ${categoryKey}.json`);
-          }
-
-          projects = await response.json();
+          const datamodule = await import(`@/data/projects/${categoryKey}.json`);
+          projects = datamodule.default as Project[];
         }
 
         setCurrentProjects(projects);
