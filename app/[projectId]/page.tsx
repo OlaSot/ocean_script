@@ -1,6 +1,7 @@
+"use client";
+
 import ProjectUi from "@/components/ProjectUi";
 import { Project } from "@/types/types";
-
 
 export async function generateStaticParams() {
   const categories = [
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 
   for (const category of categories) {
     try {
-      const response = await fetch(`https://your-domain.com/projects/${category}.json`);
+      const response = await fetch(`/projects/${category}.json`);
       if (!response.ok) {
         throw new Error(`Не удалось загрузить ${category}.json`);
       }
@@ -31,7 +32,6 @@ export async function generateStaticParams() {
     projectId: project.projectId,
   }));
 }
-
 
 export default function ProjectPage({ params }: { params: { projectId: string } }) {
   return <ProjectUi projectId={params.projectId} />;
