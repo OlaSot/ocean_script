@@ -1,0 +1,30 @@
+[
+    {
+      "projectId": "brand-identity-1",
+      "title": "Brand Identity",
+      "description": "Full branding package",
+      "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+      "tags": ["Logo Design", "Corporate Identity", "Typography"]
+    },
+    {
+      "projectId": "minimal-logo-1",
+      "title": "Minimal Logo",
+      "description": "Minimalistic logo design",
+      "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+      "tags": ["Flat Design", "Vector Art", "Brand Recognition"]
+    },
+    {
+      "projectId": "brand-identity-2",
+      "title": "Brand Identity",
+      "description": "Full branding package",
+      "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+      "tags": ["Logo Design", "Corporate Identity", "Typography"]
+    },
+    {
+      "projectId": "minimal-logo-2",
+      "title": "Minimal Logo",
+      "description": "Minimalistic logo design",
+      "image": "https://images.unsplash.com/photo-1739715640692-22ef6a326271",
+      "tags": ["Flat Design", "Vector Art", "Brand Recognition"]
+    }
+  ]

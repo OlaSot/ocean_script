@@ -1,0 +1,30 @@
+[
+    {
+      "projectId": "marketing-page-1",
+      "title": "Marketing Page",
+      "description": "High conversion landing page",
+      "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+      "tags": ["Lead Generation", "High Conversion", "A/B Testing"]
+    },
+    {
+      "projectId": "startup-page-1",
+      "title": "Startup Page",
+      "description": "Startup launch page",
+      "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+      "tags": ["Startup", "Minimal Design", "Pitch Deck"]
+    },
+    {
+      "projectId": "marketing-page-2",
+      "title": "Marketing Page",
+      "description": "High conversion landing page",
+      "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+      "tags": ["Lead Generation", "High Conversion", "A/B Testing"]
+    },
+    {
+      "projectId": "startup-page-2",
+      "title": "Startup Page",
+      "description": "Startup launch page",
+      "image": "https://images.unsplash.com/photo-1739369122285-8560a5eb18fd",
+      "tags": ["Startup", "Minimal Design", "Pitch Deck"]
+    }
+  ]

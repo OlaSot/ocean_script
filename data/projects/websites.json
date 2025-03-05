@@ -1,0 +1,30 @@
+[
+    {
+      "projectId": "clothes-marketplace",
+      "title": "Clothes Marketplace",
+      "description": "E-commerce web store",
+      "image": "/Project card.webp",
+      "tags": ["Marketplace", "E-commerce", "Responsive Design"]
+    },
+    {
+      "projectId": "ukrainemart",
+      "title": "Ukrainemart",
+      "description": "The first Ukrainian B2B platform for export",
+      "image": "/Project card (1).webp",
+      "tags": ["B2B", "Business Solutions", "Performance Optimization"]
+    },
+    {
+      "projectId": "allgau",
+      "title": "Allgau",
+      "description": "CRM system for businesses",
+      "image": "/Project card (2).webp",
+      "tags": ["CRM", "Database Management", "User Roles"]
+    },
+    {
+      "projectId": "clickwerk",
+      "title": "Clickwerk",
+      "description": "Mounting systems with pixel strength",
+      "image": "/Project card (3).webp",
+      "tags": ["Industrial", "Technical UI", "SEO Optimized"]
+    }
+  ]

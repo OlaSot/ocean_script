@@ -6,11 +6,19 @@ import { Contact } from "@/components/sections/Contact";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { PageHero } from "@/components/ui/PageHero";
 import ProjectsGrid from "@/components/ui/ProjectsGrid";
-import projectsData from "@/data/projects.json";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("Websites");
-  const categories = projectsData.categories;
+
+
+  const categories = [
+    "Websites",
+    "Online-stores",
+    "Landing pages",
+    "CRM-systems",
+    "Branding and logo",
+    "App design",
+  ];
 
   return (
     <div>
@@ -21,7 +29,6 @@ export default function PortfolioPage() {
         tagText="Portfolio"
       />
       <Container>
-   
         <div className="overflow-x-auto whitespace-nowrap scrollbar-hidden">
           <style>
             {`
@@ -33,7 +40,7 @@ export default function PortfolioPage() {
               }
             `}
           </style>
-          <div className=" flex space-x-3 md:space-x-6 lg:space-x-8">
+          <div className="flex space-x-3 md:space-x-6 lg:space-x-8">
             {categories.map((category) => (
               <button
                 key={category}
@@ -52,9 +59,8 @@ export default function PortfolioPage() {
           </div>
         </div>
 
-    
         <div className="mt-[50px]">
-        <ProjectsGrid selectedCategory={selectedCategory} />
+          <ProjectsGrid selectedCategory={selectedCategory} />
           <div className="mt-[50px] mb-[150px]">
             <ArrowLeftButton text="Learn more" />
           </div>

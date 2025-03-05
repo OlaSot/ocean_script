@@ -1,0 +1,30 @@
+[
+    {
+      "projectId": "fashion-store-1",
+      "title": "Fashion Store",
+      "description": "E-commerce website for clothing",
+      "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+      "tags": ["Fashion", "Online Shopping", "Modern UI"]
+    },
+    {
+      "projectId": "electronics-store-1",
+      "title": "Electronics Store",
+      "description": "Online shop for gadgets",
+      "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+      "tags": ["Tech", "Product Listings", "Secure Payments"]
+    },
+    {
+      "projectId": "fashion-store-2",
+      "title": "Fashion Store",
+      "description": "E-commerce website for clothing",
+      "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+      "tags": ["Fashion", "Online Shopping", "Modern UI"]
+    },
+    {
+      "projectId": "electronics-store-2",
+      "title": "Electronics Store",
+      "description": "Online shop for gadgets",
+      "image": "https://images.unsplash.com/photo-1739793669691-758d98bd8a4b",
+      "tags": ["Tech", "Product Listings", "Secure Payments"]
+    }
+  ]

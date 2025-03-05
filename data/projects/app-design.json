@@ -1,0 +1,30 @@
+[
+    {
+      "projectId": "fitness-app-1",
+      "title": "Fitness App",
+      "description": "UI/UX design for fitness application",
+      "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+      "tags": ["Health", "Workout Tracker", "Push Notifications"]
+    },
+    {
+      "projectId": "finance-tracker-1",
+      "title": "Finance Tracker",
+      "description": "Finance management app design",
+      "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+      "tags": ["FinTech", "Expense Tracking", "Dark Mode"]
+    },
+    {
+      "projectId": "fitness-app-2",
+      "title": "Fitness App",
+      "description": "UI/UX design for fitness application",
+      "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+      "tags": ["Health", "Workout Tracker", "Push Notifications"]
+    },
+    {
+      "projectId": "finance-tracker-2",
+      "title": "Finance Tracker",
+      "description": "Finance management app design",
+      "image": "https://images.unsplash.com/photo-1739737991332-557aa4da4f4e",
+      "tags": ["FinTech", "Expense Tracking", "Dark Mode"]
+    }
+  ]

@@ -1,0 +1,42 @@
+{
+    "siteData": {
+      "name": "Clothes Marketplace",
+      "mainpage": "https://www.clothes-marketplace.com/",
+      "location": "Global",
+      "description": "E-commerce platform for clothing"
+    },
+    "logos": [
+      { "src": "/logos/GoogleAds.svg", "alt": "Google Ads" },
+      { "src": "/logos/fb.svg", "alt": "Facebook" }
+    ],
+    "heroSection": {
+      "bg": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tagText": "Case"
+    },
+    "sections": {
+      "gridValues": {
+        "category": "E-commerce",
+        "location": "USA",
+        "price": "2500$",
+        "timeline": "2 Months"
+      },
+      "description": "A robust e-commerce platform designed for scalability and user engagement."
+    },
+    "images": [
+      { "alt": "main", "src": "/image 20.png" },
+      { "alt": "main", "src": "/Img.png" },
+      { "alt": "Laptop Mockup", "src": "/mainpagescreen.png" },
+      { "alt": "Mobile Mockup", "src": "/mob2.png" }
+    ],
+    "squareImages": [
+      { "alt": "main", "src": "https://images.unsplash.com/photo-1524464706543-574d1bf3f7d9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { "alt": "main", "src": "https://images.unsplash.com/photo-1591643590697-9297acbb13f9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+    ],
+    "mobImages": [
+      { "alt": "main", "src": "/mobImg/mob1.png" },
+      { "alt": "main", "src": "/mobImg/mob2.png" },
+      { "alt": "main", "src": "/mobImg/mob3.png" },
+      { "alt": "main", "src": "/mobImg/mobImg.png" }
+    ]
+  }
+  

@@ -1,0 +1,44 @@
+{
+    "siteData": {
+      "name": "Ukrainemart",
+      "mainpage": "https://www.ukrainemart.com/",
+      "location": "Ukraine",
+      "description": "The first Ukrainian B2B platform for export"
+    },
+    "logos": [
+    { "src": "/logos/GoogleAds.svg", "alt": "Google Ads" },
+    { "src": "/logos/fb.svg", "alt": "Facebook" },
+    { "src": "/logos/tiktok.svg", "alt": "TikTok" },
+    { "src": "/logos/pinterest.svg", "alt": "Pinterest" }
+  ],
+    "heroSection": {
+      "bg": "https://images.unsplash.com/photo-1529511582893-2d7e684dd128?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tagText": "Case"
+    },
+    "sections": {
+        "gridValues": {
+          "category": "UI/UX Design",
+          "location": "Ukraine",
+          "price": "2000$",
+          "timeline": "1 Month"
+        },
+      "description": "A B2B platform tailored for Ukrainian exporters."
+    },
+    "images": [
+      { "alt": "main", "src": "/image 20.png" },
+      { "alt": "main", "src": "/Img.png" },
+      { "alt": "Laptop Mockup", "src": "/mainpagescreen.png" },
+      { "alt": "Mobile Mockup", "src": "/mob2.png" }
+    ],
+    "squareImages": [
+      { "alt": "main", "src": "https://plus.unsplash.com/premium_photo-1676747210010-45707474df36?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+      { "alt": "main", "src": "https://plus.unsplash.com/premium_photo-1679328729747-38895d99999d?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+    ],
+    "mobImages": [
+      { "alt": "main", "src": "/mobImg/mob1.png" },
+      { "alt": "main", "src": "/mobImg/mob2.png" },
+      { "alt": "main", "src": "/mobImg/mob3.png" },
+      { "alt": "main", "src": "/mobImg/mobImg.png" }
+    ]
+  }
+  
