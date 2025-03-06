@@ -1,19 +1,30 @@
-"use client";
-
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
-import ContactShortForm from "@/components/sections/ContactShortForm";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Tag } from "@/components/ui/tag";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
-import { motion } from "framer-motion";
+import { Metadata } from "next";
+import ContactShortForm from "@/components/sections/ContactShortForm";
+import AnimatedSection from "@/components/AnimatedSection.tsx";
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: "UI/UX Design | Ocean Script - Digital Agency",
+    description:
+      "Explore UI/UX design services at Ocean Script, creating intuitive and engaging user experiences.",
+    openGraph: {
+      title: "UI/UX Design | Ocean Script - Digital Agency",
+      description:
+        "Explore UI/UX design services at Ocean Script, creating intuitive and engaging user experiences.",
+      images: ["/uiBG.webp"],
+    },
+  };
+};
 
 export default function WebDevelopmentPage() {
-  const logos = [{ src: "/logos/figma.svg", alt: "Figma" }];
+  const logos = [{ src: "/logos/figma.svg", alt: "Figma design tool" }];
 
   const stages = [
     {
@@ -28,12 +39,14 @@ export default function WebDevelopmentPage() {
 
   return (
     <div>
-      <PageHero
-        title="UI/UX Design"
-        description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/uiBG.webp"
-        tagText="UI/UX"
-      />
+      <AnimatedSection>
+        <PageHero
+          title="UI/UX Design"
+          description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
+          bg="/uiBG.webp"
+          tagText="UI/UX"
+        />
+      </AnimatedSection>
       <Container>
         <div className="mb-[150px]">
           <SectionHeader
@@ -44,10 +57,9 @@ export default function WebDevelopmentPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <motion.div
+            <AnimatedSection
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="text-gray-600 text-lg leading-7"
             >
@@ -65,7 +77,7 @@ export default function WebDevelopmentPage() {
                 ut tincidunt ultricies aliquet justo fringilla. Consequat amet
                 id cras tellus.
               </p>
-            </motion.div>
+            </AnimatedSection>
 
             <WorkProcessSteps stages={stages} />
           </div>

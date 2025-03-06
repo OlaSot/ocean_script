@@ -1,10 +1,10 @@
-import { Hero } from "@/components/sections/Hero";
 import { CustomerPains } from "@/components/sections/CustomerPains";
 import { Services } from "@/components/sections/Services";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { WorkProcess } from "@/components/sections/WorkProcess";
 import { Contact } from "@/components/sections/Contact";
 import Description from "@/components/sections/Description";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (

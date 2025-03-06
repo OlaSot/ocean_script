@@ -8,7 +8,15 @@ interface ContainerProps {
 }
 
 export function Container({ children, className = "" }: ContainerProps) {
-  const [paddingClass, setPaddingClass] = useState("");
+  const [paddingClass, setPaddingClass] = useState(() => {
+
+    if (typeof window === "undefined") {
+      return "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]"; 
+    }
+    return window.innerHeight < 1080
+      ? "px-4 sm:px-6 lg:px-8 xl:px-[80px] 2xl:px-[195px]"
+      : "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]";
+  });
 
   useEffect(() => {
     const getPaddingClass = () => {
@@ -20,9 +28,6 @@ export function Container({ children, className = "" }: ContainerProps) {
     const updatePadding = () => {
       setPaddingClass(getPaddingClass());
     };
-
-
-    updatePadding();
 
 
     let timeoutId: NodeJS.Timeout | null = null;
@@ -39,8 +44,9 @@ export function Container({ children, className = "" }: ContainerProps) {
   }, []);
 
   return (
-    <div 
-      className={`mx-auto w-full max-w-[1920px] transition-[padding] duration-300 ${paddingClass} ${className}`}
+    <div
+      className={`mx-auto w-full max-w-[1920px] ${paddingClass} ${className}`}
+
     >
       {children}
     </div>

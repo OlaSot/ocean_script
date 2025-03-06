@@ -1,27 +1,25 @@
-"use client";
-
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import { PageHero } from "@/components/ui/PageHero";
-import { Tag } from "@/components/ui/tag";
-import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
-import { motion } from "framer-motion";
-import { Advantages } from "@/components/sections/Advantages";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
+import { Advantages } from "@/components/sections/Advantages";
+import AnimatedSection from "@/components/AnimatedSection.tsx";
 import ContactShortForm from "@/components/sections/ContactShortForm";
+
+
 
 export default function AdvertisingPage() {
   const logos = [
-    { src: "/logos/laravel.svg", alt: "Laravel" },
-    { src: "/logos/nuxt.svg", alt: "NuxtJS" },
-    { src: "/logos/GO.svg", alt: "Go" },
-    { src: "/logos/mySQL.svg", alt: "MySQL" },
-    { src: "/logos/postgres.svg", alt: "PostgreSQL" },
-    { src: "/logos/mongo.svg", alt: "MongoDB" },
-    { src: "/logos/docker.svg", alt: "Docker" },
-    { src: "/logos/aws.svg", alt: "AWS" },
+    { src: "/logos/laravel.svg", alt: "Laravel framework" },
+    { src: "/logos/nuxt.svg", alt: "NuxtJS framework" },
+    { src: "/logos/GO.svg", alt: "Go programming language" },
+    { src: "/logos/mySQL.svg", alt: "MySQL database" },
+    { src: "/logos/postgres.svg", alt: "PostgreSQL database" },
+    { src: "/logos/mongo.svg", alt: "MongoDB database" },
+    { src: "/logos/docker.svg", alt: "Docker containerization" },
+    { src: "/logos/aws.svg", alt: "Amazon Web Services" },
   ];
 
   const integrations = [
@@ -53,12 +51,14 @@ export default function AdvertisingPage() {
 
   return (
     <div>
-      <PageHero
-        title="CRM & ERP - systems"
-        description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/crm.jpg"
-        tagText="CRM & ERP"
-      />
+      <AnimatedSection>
+        <PageHero
+          title="CRM & ERP - systems"
+          description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
+          bg="/crm.jpg"
+          tagText="CRM & ERP"
+        />
+      </AnimatedSection>
       <Container>
         <div className="mb-[150px]">
           <div className="flex flex-col md:flex-row gap-5 items-center">
@@ -70,12 +70,11 @@ export default function AdvertisingPage() {
                 textVariant="black"
               />
 
-              <motion.div
+              <AnimatedSection
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className=" text-lg leading-7"
+                className="text-lg leading-7"
               >
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Convallis arcu nunc
@@ -89,7 +88,7 @@ export default function AdvertisingPage() {
                   bibendum molestie erat. Viverra aliquam posuere consectetur
                   nisi.
                 </p>
-              </motion.div>
+              </AnimatedSection>
             </div>
 
             <div className="flex-1">

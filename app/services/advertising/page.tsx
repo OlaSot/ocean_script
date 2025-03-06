@@ -1,23 +1,20 @@
-"use client";
-
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Technologies } from "@/components/sections/Technologies";
 import { PageHero } from "@/components/ui/PageHero";
-import { Tag } from "@/components/ui/tag";
-import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
-import { motion } from "framer-motion";
-import { Advantages } from "@/components/sections/Advantages";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
+import { Advantages } from "@/components/sections/Advantages";
+import AnimatedSection from "@/components/AnimatedSection.tsx";
 import ContactShortForm from "@/components/sections/ContactShortForm";
+
 
 export default function AdvertisingPage() {
   const logos = [
-    { src: "/logos/GoogleAds.svg", alt: "Laravel" },
-    { src: "/logos/fb.svg", alt: "Laravel" },
-    { src: "/logos/tiktok.svg", alt: "Laravel" },
-    { src: "/logos/pinterest.svg", alt: "Laravel" },
+    { src: "/logos/GoogleAds.svg", alt: "Google Ads" },
+    { src: "/logos/fb.svg", alt: "Facebook Ads" },
+    { src: "/logos/tiktok.svg", alt: "TikTok Ads" },
+    { src: "/logos/pinterest.svg", alt: "Pinterest Ads" },
   ];
 
   const advertisingItems = [
@@ -29,12 +26,14 @@ export default function AdvertisingPage() {
 
   return (
     <div>
-      <PageHero
-        title="Advertising"
-        description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/advers.jpg"
-        tagText="Ads"
-      />
+      <AnimatedSection>
+        <PageHero
+          title="Advertising"
+          description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
+          bg="/advers.jpg"
+          tagText="Ads"
+        />
+      </AnimatedSection>
       <Container>
         <div className="mb-[150px]">
           <div className="flex flex-col md:flex-row gap-5 items-center">
@@ -46,12 +45,11 @@ export default function AdvertisingPage() {
                 textVariant="black"
               />
 
-              <motion.div
+              <AnimatedSection
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className=" text-lg leading-7"
+                className="text-lg leading-7"
               >
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Convallis arcu nunc
@@ -65,9 +63,8 @@ export default function AdvertisingPage() {
                   bibendum molestie erat. Viverra aliquam posuere consectetur
                   nisi.
                 </p>
-              </motion.div>
+              </AnimatedSection>
             </div>
-            {/* <div className="flex flex-col sm:items-start md:items-center w-full"> */}
             <div className="flex flex-col w-full sm:items-start md:flex-1">
               <AdvertisingGrid items={advertisingItems} />
             </div>

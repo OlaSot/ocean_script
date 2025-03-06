@@ -1,16 +1,16 @@
-"use client";
-
+import AnimatedSection from "@/components/AnimatedSection.tsx";
 import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
 import ValuesSection from "@/components/sections/Values";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Tag } from "@/components/ui/tag";
-import { motion } from "framer-motion";
+
+
 
 export default function AboutUsPage() {
   return (
     <div>
+
       <PageHero
         title="About us"
         description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
@@ -20,21 +20,17 @@ export default function AboutUsPage() {
       <Container>
         <div className="mb-[150px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 items-center">
-            <motion.div
+            <AnimatedSection
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
               className="w-full flex justify-center"
             >
               <div className="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-gray-300 rounded-[20px]" />
-            </motion.div>
+            </AnimatedSection>
 
-            <motion.div
+            <AnimatedSection
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
               className="text-gray-600 text-lg leading-7"
             >
               <SectionHeader
@@ -53,12 +49,11 @@ export default function AboutUsPage() {
                 aenean urna volutpat quam libero potenti morbi. Volutpat sit
                 nisi in et aliquet mauris potenti euismod.
               </p>
-            </motion.div>
+            </AnimatedSection>
           </div>
         </div>
       </Container>
       <ValuesSection />
-
       <Contact />
     </div>
   );

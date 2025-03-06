@@ -1,5 +1,26 @@
 import ProjectUi from "@/components/ProjectUi";
-import { Project } from "@/types/types";
+import { Project, ProjectData } from "@/types/types";
+
+
+export default async function ProjectPage({ params }: { params: { projectId: string } }) {
+  const { projectId } = params;
+
+  let projectData: ProjectData;
+
+  try {
+    const dataModule = await import(`@/data/sitedata/${projectId}.json`);
+    projectData = dataModule.default as ProjectData;
+  } catch (error) {
+    console.error(`Ошибка загрузки данных для ${projectId}:`, error);
+    throw new Error("Project not found"); 
+  }
+
+  return (
+    <>
+      <ProjectUi projectData={projectData} />
+    </>
+  );
+}
 
 export async function generateStaticParams() {
   const categories = [
@@ -15,8 +36,8 @@ export async function generateStaticParams() {
 
   for (const category of categories) {
     try {
-      const datamodule = await import(`@/data/projects/${category}.json`);
-      const projects: Project[] = datamodule.default as Project[];
+      const dataModule = await import(`@/data/projects/${category}.json`);
+      const projects: Project[] = dataModule.default as Project[];
       allProjects = [...allProjects, ...projects];
     } catch (error) {
       console.error(`Ошибка загрузки данных для ${category}:`, error);
@@ -26,8 +47,4 @@ export async function generateStaticParams() {
   return allProjects.map((project) => ({
     projectId: project.projectId,
   }));
-}
-
-export default function ProjectPage({ params }: { params: { projectId: string } }) {
-  return <ProjectUi projectId={params.projectId} />;
 }

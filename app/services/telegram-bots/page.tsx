@@ -1,46 +1,59 @@
-"use client";
-
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
 import { Technologies } from "@/components/sections/Technologies";
 import { PageHero } from "@/components/ui/PageHero";
 import { Tag } from "@/components/ui/tag";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
-import { motion } from "framer-motion";
 import Directions from "@/components/sections/Directions";
 import ProjectsGrid from "@/components/ui/ProjectsGrid";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import ContactShortForm from "@/components/sections/ContactShortForm";
 import { ServicesGrid } from "@/components/ui/ServicesGrid";
+import { Metadata } from "next";
+import ContactShortForm from "@/components/sections/ContactShortForm";
+import AnimatedSection from "@/components/AnimatedSection.tsx";
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: "Telegram Bots | Ocean Script - Digital Agency",
+    description:
+      "Discover Telegram bot development services at Ocean Script, enhancing your business with automation.",
+    openGraph: {
+      title: "Telegram Bots | Ocean Script - Digital Agency",
+      description:
+        "Discover Telegram bot development services at Ocean Script, enhancing your business with automation.",
+      images: ["/tgbots.jpg"],
+    },
+  };
+};
 
 export default function TelegramPage() {
-
   const services = [
-
     {
       title: "CRM",
-      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
       image: "/figures/Untitled-1-06.png",
       href: "/services/crm-erp",
     },
     {
       title: "Payment systems",
-      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
       image: "/figures/Untitled-1-01.png",
       href: "/services/payment-systems",
     },
     {
       title: "Websites",
-      description: "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.",
       image: "/figures/Untitled-1-04.png",
       href: "/services/websites",
     },
   ];
 
   const logos = [
-    { src: "/logos/python.svg", alt: "python" },
-    { src: "/logos/docker.svg", alt: "Docker" },
+    { src: "/logos/python.svg", alt: "Python programming language" },
+    { src: "/logos/docker.svg", alt: "Docker containerization platform" },
   ];
 
   const advantagesItems = [
@@ -56,32 +69,32 @@ export default function TelegramPage() {
 
   return (
     <div>
-      <PageHero
-        title="Telegram bots"
-        description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
-        bg="/tgbots.jpg"
-        tagText="Telegram"
-      />
+      <AnimatedSection>
+        <PageHero
+          title="Telegram bots"
+          description="Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum. Velit facilisis sem cras phasellus ullamcorper varius placerat."
+          bg="/tgbots.jpg"
+          tagText="Telegram"
+        />
+      </AnimatedSection>
       <Container>
         <div className="mb-[150px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <motion.div
-              className="flex flex-col gap-6"
+            <AnimatedSection
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              className="flex flex-col gap-6"
             >
               <div className="text-xl md:text-3xl font-bold text-black flex flex-col gap-4">
                 <div className="inline-flex">
-                  <Tag text={"Service and Advantages"} variant="black" />
+                  <Tag text="Service and Advantages" variant="black" />
                 </div>
                 <h2>What is it and why?</h2>
               </div>
 
-              <motion.div
+              <AnimatedSection
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="text-lg leading-7"
               >
@@ -97,9 +110,9 @@ export default function TelegramPage() {
                   bibendum molestie erat. Viverra aliquam posuere consectetur
                   nisi.
                 </p>
-              </motion.div>
-            </motion.div>
-            
+              </AnimatedSection>
+            </AnimatedSection>
+
             <div className="w-full">
               <AdvertisingGrid items={advantagesItems} />
             </div>
@@ -107,18 +120,18 @@ export default function TelegramPage() {
         </div>
       </Container>
 
-          <Container>
-          <SectionHeader
-            title="Integration with"
-            tagText="Integration"
-            tagVariant="black"
-            textVariant="black"
-          />
-            <div >
-              <ServicesGrid services={services} />
-            </div>
-          </Container>
-      
+      <Container>
+        <SectionHeader
+          title="Integration with"
+          tagText="Integration"
+          tagVariant="black"
+          textVariant="black"
+        />
+        <div>
+          <ServicesGrid services={services} />
+        </div>
+      </Container>
+
       <section className="py-[150px]">
         <Container>
           <div>
@@ -129,20 +142,19 @@ export default function TelegramPage() {
               textVariant="black"
             />
 
-            <ProjectsGrid selectedCategory="all"/>
+            <ProjectsGrid selectedCategory="all" />
 
-            <motion.div
-              className="btn text-center mt-8"
+            <AnimatedSection
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              className="btn text-center mt-8"
             >
-              <ArrowLeftButton text={"Learn more"} />
-            </motion.div>
+              <ArrowLeftButton text="Learn more" />
+            </AnimatedSection>
           </div>
         </Container>
       </section>
-      
+
       <Technologies logos={logos} />
       <ContactShortForm />
     </div>
