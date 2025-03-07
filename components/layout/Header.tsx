@@ -13,10 +13,10 @@ import ArrowLeftButton from "../ui/arrowLeftBtn";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Добавляем флаг для клиентской стороны
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
-    setIsClient(true); // Устанавливаем, что мы на клиенте
+    setIsClient(true); 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -25,7 +25,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Если не клиент (серверный рендеринг), возвращаем базовый хедер без динамики
+  
   if (!isClient) {
     return (
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent transition-colors duration-300">
