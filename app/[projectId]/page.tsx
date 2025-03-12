@@ -2,15 +2,18 @@ import ProjectUi from "@/components/ProjectUi";
 import { ProjectData, Project } from "@/types/types";
 import { notFound } from "next/navigation";
 
-export const metadata = {
-  title: "Project Details",
-  description: "Project details page",
-  metadataBase: new URL("https://my-site.vercel.app"), // Replace with your domain
-};
 
-export default async function ProjectPage({ params }: { params: { projectId: string } }) {
-  console.log("Params:", params); // Отладка
+export default async function ProjectPage({ params }: any) {
+  console.log("Params before await:", params);
+
+  if (params instanceof Promise) {
+    params = await params;
+  }
+
+  console.log("Params after await:", params);
+
   const { projectId } = params;
+
   let projectData: ProjectData;
 
   try {
@@ -24,7 +27,7 @@ export default async function ProjectPage({ params }: { params: { projectId: str
   return <ProjectUi projectData={projectData} />;
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const categories = [
     "websites",
     "online-stores",
@@ -35,28 +38,27 @@ export async function generateStaticParams() {
   ];
 
   let allProjects: Project[] = [];
-
-  for (const category of categories) {
+  categories.forEach((category) => {
     try {
-      const dataModule = await import(`@/data/projects/${category}.json`);
+      const dataModule = require(`@/data/projects/${category}.json`);
       const projects: Project[] = dataModule.default as Project[];
       allProjects = [...allProjects, ...projects];
     } catch (error) {
       console.error(`Ошибка загрузки данных для ${category}:`, error);
     }
-  }
+  });
 
-  const validProjects = [];
-  for (const project of allProjects) {
+  const validProjects = allProjects.filter((project) => {
     try {
-      await import(`@/data/sitedata/${project.projectId}.json`);
-      validProjects.push(project);
+      require(`@/data/sitedata/${project.projectId}.json`);
+      return true;
     } catch (error) {
       console.warn(`Нет JSON-файла для ${project.projectId}, пропускаем`);
+      return false;
     }
-  }
+  });
 
   return validProjects.map((project) => ({
-    projectId: project.projectId,
+    params: { projectId: project.projectId },
   }));
 }
