@@ -1,14 +1,13 @@
+"use client";
+
 import { Container } from "@/components/Container";
 import { Contact } from "@/components/sections/Contact";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { PageHero } from "@/components/ui/PageHero";
 import PortfolioCategorySelector from "@/components/PortfolioCategorySelector";
 import AnimatedSection from "@/components/AnimatedSection.tsx";
-import { Metadata } from "next";
 import ProjectsGrid from "@/components/ui/ProjectsGrid";
-
-
-
+import { useState } from "react";
 
 export default function PortfolioPage() {
   const categories = [
@@ -20,6 +19,7 @@ export default function PortfolioPage() {
     "App design",
   ];
   const defaultCategory = "Websites";
+  const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
 
   return (
     <div>
@@ -35,11 +35,10 @@ export default function PortfolioPage() {
         <PortfolioCategorySelector
           categories={categories}
           defaultCategory={defaultCategory}
-          onCategoryChange={(category) => {}}
+          onCategoryChange={setSelectedCategory} 
         />
-
         <div className="mt-[50px]">
-          <ProjectsGrid selectedCategory={defaultCategory} />
+          <ProjectsGrid selectedCategory={selectedCategory} />
           <div className="mt-[50px] mb-[150px]">
             <ArrowLeftButton text="Learn more" />
           </div>

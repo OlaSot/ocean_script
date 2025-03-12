@@ -8,15 +8,8 @@ interface ContainerProps {
 }
 
 export function Container({ children, className = "" }: ContainerProps) {
-  const [paddingClass, setPaddingClass] = useState(() => {
+  const [paddingClass, setPaddingClass] = useState("px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]");
 
-    if (typeof window === "undefined") {
-      return "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]"; 
-    }
-    return window.innerHeight < 1080
-      ? "px-4 sm:px-6 lg:px-8 xl:px-[80px] 2xl:px-[195px]"
-      : "px-4 sm:px-6 lg:px-8 xl:px-[125px] 2xl:px-[195px]";
-  });
 
   useEffect(() => {
     const getPaddingClass = () => {
