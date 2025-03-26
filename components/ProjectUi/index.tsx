@@ -1,9 +1,9 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Technologies } from "@/components/sections/Technologies";
+import  Technologies from "@/components/sections/Technologies";
 import { ImgContainer } from "@/components/ImgContainer";
-import { Contact } from "@/components/sections/Contact";
+import  Contact  from "@/components/sections/Contact";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { Tag } from "@/components/ui/tag";
 import { ProjectData } from "@/types/types";

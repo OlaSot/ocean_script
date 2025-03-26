@@ -1,6 +1,6 @@
 import AnimatedSection from "@/components/AnimatedSection.tsx";
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
+import  Contact  from "@/components/sections/Contact";
 import ValuesSection from "@/components/sections/Values";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";

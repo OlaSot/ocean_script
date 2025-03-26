@@ -1,13 +1,26 @@
+import dynamic from "next/dynamic";
 import { Container } from "@/components/Container";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Technologies } from "@/components/sections/Technologies";
-import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
-import { PageHero } from "@/components/ui/PageHero";
+// import { Portfolio } from "@/components/sections/Portfolio";
+// import { Technologies } from "@/components/sections/Technologies";
+// import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
+import  {PageHero}  from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { Metadata } from "next";
 import ContactShortForm from "@/components/sections/ContactShortForm";
 import AnimatedSection from "@/components/AnimatedSection.tsx";
+
+
+const Portfolio = dynamic(() => import("@/components/sections/Portfolio"), {
+  loading: () => <div>Loading portfolio...</div>,
+});
+const Technologies  = dynamic(() => import("@/components/sections/Technologies"), {
+  loading: () => <div>Loading portfolio...</div>,
+});
+const TypesOfSolutions = dynamic(() => import("@/components/sections/TypesOfSolutions"), {
+  loading: () => <div>Loading portfolio...</div>,
+});
+
 
 
 

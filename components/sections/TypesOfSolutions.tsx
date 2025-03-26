@@ -15,7 +15,6 @@ export default function TypesOfSolutions() {
           tagVariant="white"
           textVariant="white"
         />
-
         <SolutionsGrid />
       </Container>
     </div>

@@ -1,8 +1,8 @@
 import { Container } from "@/components/Container";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Technologies } from "@/components/sections/Technologies";
+import  Portfolio  from "@/components/sections/Portfolio";
+import  Technologies  from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
-import { PageHero } from "@/components/ui/PageHero";
+import  {PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { Metadata } from "next";

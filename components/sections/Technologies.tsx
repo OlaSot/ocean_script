@@ -10,7 +10,7 @@ interface TechnologiesProps {
   logos: { src: string; alt: string }[];
 }
 
-export function Technologies({ logos }: TechnologiesProps) {
+const Technologies = ({ logos }: TechnologiesProps) => {
   const pathname = usePathname();
   const isProjectPage = pathname === "/project";
 
@@ -96,3 +96,5 @@ export function Technologies({ logos }: TechnologiesProps) {
     </section>
   );
 }
+
+export default Technologies;

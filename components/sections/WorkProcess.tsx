@@ -16,7 +16,7 @@ const stages = [
   { number: "05", title: "LAUNCH" },
 ];
 
-export function WorkProcess() {
+export default function WorkProcess() {
   return (
     <section className="pb-[80px] md:pb-[120px] lg:pb-[150px]">
       <Container>

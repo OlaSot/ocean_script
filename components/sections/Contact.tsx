@@ -27,7 +27,7 @@ const dropdownVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export function Contact() {
+export default function Contact() {
   const [selectedService, setSelectedService] = useState(
     "Service you're interested in*"
   );

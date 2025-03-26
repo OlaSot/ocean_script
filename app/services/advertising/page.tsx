@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Technologies } from "@/components/sections/Technologies";
-import { PageHero } from "@/components/ui/PageHero";
+import  Portfolio  from "@/components/sections/Portfolio";
+import  Technologies  from "@/components/sections/Technologies";
+import  {PageHero}  from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
 import { Advantages } from "@/components/sections/Advantages";

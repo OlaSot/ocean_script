@@ -1,14 +1,12 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
 import ContactShortForm from "@/components/sections/ContactShortForm";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Technologies } from "@/components/sections/Technologies";
+import  Portfolio  from "@/components/sections/Portfolio";
+import  Technologies  from "@/components/sections/Technologies";
 import TypesOfSolutions from "@/components/sections/TypesOfSolutions";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Tag } from "@/components/ui/tag";
 import { WorkProcessSteps } from "@/components/ui/WorkProcessSteps";
 import { motion } from "framer-motion";
 

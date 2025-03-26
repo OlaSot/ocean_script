@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import { Contact } from "@/components/sections/Contact";
+import  Contact  from "@/components/sections/Contact";
 import ArrowLeftButton from "@/components/ui/arrowLeftBtn";
 import { PageHero } from "@/components/ui/PageHero";
 import PortfolioCategorySelector from "@/components/PortfolioCategorySelector";

@@ -6,7 +6,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 import ArrowBtn from "@/components/ui/arrowLeftBtn";
 import ProjectsGrid from "../ui/ProjectsGrid";
 
-export function Portfolio() {
+const Portfolio = () => {
   return (
     <section className="my-mobile md:my-desktop">
       <Container>
@@ -24,3 +24,5 @@ export function Portfolio() {
     </section>
   );
 }
+
+export default Portfolio;

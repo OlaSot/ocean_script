@@ -41,12 +41,17 @@ export function generateStaticParams() {
   categories.forEach((category) => {
     try {
       const dataModule = require(`@/data/projects/${category}.json`);
-      const projects: Project[] = dataModule.default as Project[];
-      allProjects = [...allProjects, ...projects];
+      const raw = dataModule.default ?? dataModule;
+      if (Array.isArray(raw)) {
+        allProjects = [...allProjects, ...raw];
+      } else {
+        console.warn(`Данные из ${category}.json не являются массивом`);
+      }
     } catch (error) {
       console.error(`Ошибка загрузки данных для ${category}:`, error);
     }
   });
+  
 
   const validProjects = allProjects.filter((project) => {
     try {

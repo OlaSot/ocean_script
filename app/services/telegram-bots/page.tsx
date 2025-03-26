@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import { Technologies } from "@/components/sections/Technologies";
+import  Technologies  from "@/components/sections/Technologies";
 import { PageHero } from "@/components/ui/PageHero";
 import { Tag } from "@/components/ui/tag";
 import { AdvertisingGrid } from "@/components/ui/AdvertisingGrid";
