@@ -1,8 +1,8 @@
 import { Container } from "@/components/Container";
 import dynamic from "next/dynamic";
 import { Tag } from "./tag";
-import Image from "next/image";
 import AnimatedSection from "../AnimatedSection.tsx";
+import PageHeroBackground from "./PaheHeroBackground";
 
 
 const ArrowLeftButton = dynamic(() => import("./arrowLeftBtn"), {
@@ -30,17 +30,7 @@ export function PageHero({
       role="banner"
     >
 
-      <div className="absolute inset-0 z-0 bg-cover bg-start rounded-b-xl">
-        <Image
-          src={bg}
-          alt="Background image for page hero"
-          fill
-          className="object-cover rounded-b-xl"
-          priority
-          quality={70}
-          sizes="100vw"
-        />
-      </div>
+     <PageHeroBackground src={bg} />
 
 
       <Container className="relative z-10 text-center">
