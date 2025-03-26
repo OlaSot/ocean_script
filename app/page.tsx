@@ -2,6 +2,7 @@ import { CustomerPains } from "@/components/sections/CustomerPains";
 import { Services } from "@/components/sections/Services";
 import dynamic from 'next/dynamic';
 import Hero from "@/components/sections/Hero";
+
   const Portfolio = dynamic(() => import('@/components/sections/Portfolio'), {
     loading: () => <div>Загрузка портфолио...</div>,
   });

@@ -1,17 +1,21 @@
-// components/Hero.tsx
 import { Stats } from "@/components/ui/Stats";
 import ArrowBtn from "@/components/ui/arrowLeftBtn";
 import { Tag } from "../ui/tag";
 import AnimatedSection from "../AnimatedSection.tsx";
-
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-screen max-w-full flex flex-col justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center w-full h-full"
-        style={{ backgroundImage: "url('/mainPbg.jpg')" }}
-      ></div>
+      <Image
+        src="/mainPbg.webp"
+        alt="Hero background"
+        fill
+        priority
+        quality={70}
+        sizes="100vw"
+        className="object-cover z-0"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center mt-[120px]">
         <AnimatedSection

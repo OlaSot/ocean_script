@@ -1,20 +1,20 @@
-/** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
     domains: ['images.unsplash.com'],
-    formats: ['image/avif', 'image/webp'], 
-    minimumCacheTTL: 60, 
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
   },
   reactStrictMode: true,
   experimental: {
-    serverActions: {}, 
+    serverActions: true,
   },
 };
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-module.exports = withBundleAnalyzer({});
-module.exports = nextConfig;
+
+module.exports = withBundleAnalyzer(nextConfig);
